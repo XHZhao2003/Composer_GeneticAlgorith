@@ -1,56 +1,58 @@
 from .Seed import Seed
 from .Melody import Melody
+import numpy as np
 from numpy.random import multinomial
 
 class GeneticModel:
     # 参数: 初始片段，适应度函数种类，种群最大规模，迭代次数，停止迭代的阈值
-    def __init__(self, seed : Seed, func='basic', population=10000, iter=100, threshold=1):
+    def __init__(self, seed : Seed, func='basic', maxPopulation=10000, iter=100, threshold=1):
         self.population = seed.melodyseed
         self.scoreFunction = func 
-        self.maxPopulation = population
+        self.maxPopulation = maxPopulation
         self.maxIter = iter
-        self.prob = [0.7, 0.1, 0.1, 0.1]    # 无变异，八度变异，音符变异，交换变异
+        self.prob = [0.55, 0.05, 0.3, 0.1]    # 无变异，八度变异，音符变异，交换变异
         
     def forward(self):
+        for indiv in self.population:
+            indiv.GetScore()
+            
         population = self.population
         for iter in range(self.maxIter):
+            mutation_cnt = [0, 0, 0, 0]
             # 参考文献中阐述了若干不使用crossover的理由，子代完全基于父代变异
             newPopulation = []
-            Score = []              # 父代适应度，归一化
-            randomSelection = []    # 多项分布随机出父代个体被选中的次数
             
-            for (indiv, index) in population:
-                for i in range(randomSelection[index]):
-                    mutation = self.mutate(indiv)
-                    newPopulation.append(mutation)
+            # 多项分布随机出父代个体被选中的次数
+            Score = []
+            for indiv in population:
+                Score.append(1.0 / indiv.score)
+            Score = np.array(Score)
+            scoreSum = np.sum(Score)
+            Score = Score / scoreSum
+            randomSelection = multinomial(self.maxPopulation, Score)
             
-            for indev in newPopulation: 
-                if self.scoreFunction == 'basic':
-                    pass    # 更新适应度        
-                elif self.scoreFunction == 'something else, CNN/RNN':
-                    pass    # 更新适应度
+            # 基于变异产生子代
+            for index, indiv in enumerate(population):
+                # 这一个体产生各种变异的数量
+                mutationNumbers = multinomial(randomSelection[index], self.prob)
+                for mutationType, mutationNumber in enumerate(mutationNumbers):
+                    mutation_cnt[mutationType] += mutationNumber
+                    for _ in range(mutationNumber):        # 每种变异产生mutationNumber个
+                        mutation = indiv.GetMutation(mutationType)
+                        newPopulation.append(mutation)
+            
+            # newPopulation = list(newPopulation)
+            for indiv in newPopulation: 
+                indiv.GetScore()
+            newPopulation.sort()
             population = newPopulation     
             
-            # 将population按适应度排序
-            # if best_individual.score > threshold:
-            #       self.population = population
-            #       break
-        
+            print("第%d代遗传: 最小适应度 %f, 产生变异%d, %d, %d, %d次" % 
+                  (iter + 1, population[0].score, mutation_cnt[0], mutation_cnt[1], mutation_cnt[2], mutation_cnt[3]))
+        population = list(set(population))
+        population.sort()
         self.population = population
     
     
-    def mutate(self, melody:Melody):
-        randomMutate = multinomial(1, self.prob)
-        mutation = melody
-        if randomMutate[0] == 1:
-            return mutation
-        elif randomMutate[1] == 1:
-            pass    # 八度变异
-        elif randomMutate[2] == 1:
-            pass    # 音符变异
-        elif randomMutate[3] == 1:
-            pass    # 交换相邻音符
-        
-        return mutation
     
     

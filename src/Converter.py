@@ -35,7 +35,8 @@ class Converter:
             28: 'tie'   # 延音
         }
         self.beatUnit = 1/8
-
+        
+    # 接受一个Melody对象，转换并生成midi文件
     def ToMidi(self, melody: Melody, name, bpm=80):
         notes = melody.notes
         length = melody.len
