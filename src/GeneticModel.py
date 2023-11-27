@@ -10,7 +10,7 @@ class GeneticModel:
         self.scoreFunction = func 
         self.maxPopulation = maxPopulation
         self.maxIter = iter
-        self.prob = [0.55, 0.05, 0.3, 0.1]    # 无变异，八度变异，音符变异，交换变异
+        self.prob = [0.95, 0.01, 0.03, 0.01]    # 无变异，八度变异，音符变异，交换变异
         
     def forward(self):
         for indiv in self.population:

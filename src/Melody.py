@@ -22,12 +22,12 @@ class Melody:
         cnt = 0
         score1 = 0
         index = 0
-        while self.notes[index] == 0 or self.notes[index] == 28:
+        while self.notes[index] < 2:
             index += 1
         note1 = self.notes[index]
         
         for i in range(index + 1, self.len):
-            if self.notes[i] == 0 or self.notes[i] == 28:
+            if self.notes[i] < 2:
                 continue
             note2 = self.notes[i]
             score1 += interval.Score_TwoNote(note1, note2)
@@ -39,7 +39,7 @@ class Melody:
         # 统计G大调中的调内音 (G, A, B, C, D, E, F#)
         cnt = 0
         inTonality = 0
-        Gmaj = [3, 5, 7, 8, 10, 0, 2]
+        Gmaj = [4, 6, 8, 9, 11, 1, 3]
         for note in self.notes:
             if note > 0 and note < 28:
                 cnt += 1
@@ -52,7 +52,7 @@ class Melody:
         mutation = deepcopy(self)
         # 变异位置
         target = random.randint(0, mutation.len - 1)
-        while mutation.notes[target] == 0 or mutation.notes[target] == 28:
+        while mutation.notes[target] < 2:
             # 无法改变休止，延音
             target = random.randint(0, mutation.len - 1)
 
@@ -72,22 +72,22 @@ class Melody:
         elif mutationType == 2:         # 音符变异
             # 0.03的概率变成延音
             res = random.random()
-            if res < 0.03:
-                mutation.notes[target] = 28
+            if res < 0.03 and target > 0:
+                mutation.notes[target] = 1
             else:
                 # 在上下五度之间随机变异
                 deviation = random.randint(-7, 7)
                 mutation.notes[target] += deviation
-                if mutation.notes[target] > 27:
-                    mutation.notes[target] = 27
-                elif mutation.notes[target] < 1:
-                    mutation.notes[target] = 1
+                if mutation.notes[target] > 28:
+                    mutation.notes[target] = 28
+                elif mutation.notes[target] < 2:
+                    mutation.notes[target] = 2
             return mutation
                     
         elif mutationType == 3:         # 交换音符变异
             target2 = random.randint(0, mutation.len - 1)
             # 这里实际上有可能出现一段旋律只有一个音的情况，直接允许自身交换，也就是没有变异
-            while mutation.notes[target2] == 0 or mutation.notes[target2] == 28:
+            while mutation.notes[target2] < 2:
                 target2 = random.randint(0, mutation.len - 1)
             note1 = mutation.notes[target]
             note2 = mutation.notes[target2]

@@ -13,7 +13,7 @@ class Seed:
             notes = []
             for indexOfNote in range(self.len):
                 if indexOfNote == 0:    # 不能以延音，休止开始, 参考Converter.index2note
-                    notes.append(randint(1, 27))
+                    notes.append(randint(2, 28))
                 else:
                     notes.append(randint(0, 28))
             melody = Melody(notes, self.len)
