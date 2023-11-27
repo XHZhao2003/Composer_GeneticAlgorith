@@ -44,33 +44,47 @@ class Converter:
         duration = []
         interval = []
         
+        startTime = 0
+        tempNote = 0
+        tempNoteEnd = 0         # 当前音符是否结束，判断例如 C4 - 0 - 中 Duaration=2 Interval=4
         tempDuration = self.beatUnit
         tempInterval = self.beatUnit
+        index = 0
         
-        for index, note in enumerate(notes):
-            if index == 0:  
-                midiNote.append(self.index2note[note])
-                tempDuration = self.beatUnit
-            else:
-                if note == 0:   # 休止
-                    tempInterval += self.beatUnit
-                elif note == 1:   # 延音
+        # 处理休止符开头的情形
+        while index < len(notes) and notes[index] < 2:
+            startTime += self.beatUnit
+            index += 1
+            
+        while index < len(notes):
+            curNote = notes[index]
+            if curNote == 0:
+                tempInterval += self.beatUnit
+                tempNoteEnd = 1
+            elif curNote == 1:
+                tempInterval += self.beatUnit
+                if tempNoteEnd == 0:
                     tempDuration += self.beatUnit
-                    tempInterval += self.beatUnit
-                elif note > 1 and note < 29:
+            elif curNote > 1 and curNote < 29:
+                if tempNote > 0:
+                    midiNote.append(self.index2note[tempNote])
                     duration.append(tempDuration)
                     interval.append(tempInterval)
-                    tempDuration = self.beatUnit
-                    tempInterval = self.beatUnit
-                    midiNote.append(self.index2note[note])
-                else:
-                    raise ValueError("Unexpected note %d" % note)
+                tempNote = curNote
+                tempNoteEnd = 0
+                tempDuration = self.beatUnit
+                tempInterval = self.beatUnit
+            else:
+                raise ValueError("Unexpected note %d" % curNote)
+            index += 1
+        midiNote.append(self.index2note[tempNote])
         duration.append(tempDuration)
         interval.append(tempInterval)
+
         midiNote = ','.join(midiNote)
         
         track1 = chord(midiNote) % (duration, interval)
-        play(track1, bpm=bpm, name=name)                    
+        play(track1, bpm=bpm, name=name, start_time=startTime)                    
 
     def PrintNotes(self, melody: Melody):
         notes = []
