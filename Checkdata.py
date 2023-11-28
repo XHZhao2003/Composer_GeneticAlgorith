@@ -2,7 +2,6 @@
 # 数据存放在 data/song.txt中，          
 # 输出的一系列音频存放在 data/midi/中   
 
-from musicpy import *
 from src.Melody import Melody
 from src.Converter import Converter
 

@@ -21,7 +21,8 @@ class CNNMelodyModel(nn.Module):
         self.linear = nn.Sequential(
             nn.Linear(self.channels[-1], self.linearDim[0]),
             nn.ReLU(True),
-            nn.Linear(self.linearDim[0], self.linearDim[1])
+            nn.Linear(self.linearDim[0], self.linearDim[1]),
+            nn.Softmax(dim=1)
         )
         
     def forward(self, x):

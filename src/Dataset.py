@@ -1,5 +1,6 @@
 from torch.utils.data import Dataset
 from torch.nn import functional as F
+from torch import Tensor
 import torch
 from .Melody import Melody
 
@@ -26,7 +27,7 @@ class MelodyDataset(Dataset):
                 notes = line.split()
                 notes = [int(x) for x in notes]
                 self.melodies.append(notes)
-                self.labels.append(1)
+                self.labels.append([1, 0])
                 self.positiveLength += 1
                 self.length += 1
         print("Read %d positive samples into dataset" % self.positiveLength)
@@ -39,7 +40,7 @@ class MelodyDataset(Dataset):
                 notes = line.split()
                 notes = [int(x) for x in notes]
                 self.melodies.append(notes)
-                self.labels.append(0)
+                self.labels.append([0, 1])
                 self.negativeLength += 1
                 self.length += 1
         print("Read %d negative samples into dataset" % self.negativeLength)
@@ -48,7 +49,7 @@ class MelodyDataset(Dataset):
         return self.length
     
     def __getitem__(self, index):
-        return self.melodies[index], self.labels[index]
+        return Tensor([self.melodies[index]]), Tensor(self.labels[index])
                 
         
     
