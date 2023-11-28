@@ -16,6 +16,8 @@ with open(datapath, 'r') as f:
             break
         notes = notes.split()
         notes = [int(note_) for note_ in notes]
+        if len(notes) != 32:
+            raise ValueError("Unexpected length of this piece, with length %d" % len(notes))
         melody = Melody(notes, len(notes))
         converter.PrintNotes(melody)
         outputPath = 'data/midi/' + str(index) + '.mid'
