@@ -1,5 +1,7 @@
 from functools import total_ordering
 from .Interval import Interval
+from torch import Tensor
+from .CNN.CNNModel import CNNModel
 import random
 from copy import deepcopy
 
@@ -11,10 +13,20 @@ class Melody:
         self.score = 0     # 适应度
         assert self.len == len(self.notes)
         
-    # 更新适应度
-    def GetScore(self, function='basic'): 
-        lambda1 = 0.5
-        lambda2 = 1.0
+    def GetScore(self, function='basic', model=None): 
+        if function == 'basic':
+            lambda1 = 0.5
+            lambda2 = 1.0
+            score1 = self.GetIntervalScore()    
+            score2 = self.GetScaleScore()    
+            self.score = lambda1 * score1 + lambda2 * score2 
+        elif function == 'CNN':
+            assert model != None
+            notes = Tensor([self.notes])
+            pred = model(notes)[0]
+            self.score = pred[1]      # 模型预测为负样本的概率
+
+    def GetIntervalScore(self):
         # 对所有相邻音程评分，取平均
         interval = Interval()
         note1 = 0
@@ -30,23 +42,26 @@ class Melody:
             if self.notes[i] < 2:
                 continue
             note2 = self.notes[i]
-            score1 += interval.Score_TwoNote(note1, note2)
+            score1 += interval.ScoreTwoNote(note1, note2)
             cnt += 1
             note1 = note2
         score1 = score1 / cnt
-        
+        return score1
+
+    def GetScaleScore(self):
         # 旋律中的调内音越多，适应度越好(越低)
         # 统计G大调中的调内音 (G, A, B, C, D, E, F#)
         cnt = 0
         inTonality = 0
-        Gmaj = [4, 6, 8, 9, 11, 1, 3]
+        Gmaj = [4, 6, 8, 9, 11, 1, 3]       # mod 12
         for note in self.notes:
             if note > 0 and note < 28:
                 cnt += 1
                 if (note % 12) in Gmaj:
                     inTonality += 1
         score2 = 1 - inTonality / cnt
-        self.score = lambda1 * score1 + lambda2 * score2 
+        return score2
+
         
     def GetMutation(self, mutationType=0):
         mutation = deepcopy(self)

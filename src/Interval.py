@@ -26,7 +26,7 @@ class Interval:
             3.00,           # 纯八度           12
         ] + [5.00] * 14     # 大于八度
     
-    def Score_TwoNote(self, note1 : int, note2 : int):
+    def ScoreTwoNote(self, note1 : int, note2 : int):
         if note1 < 2 or note1 > 28:
             raise ValueError("Unexpected note1 %d" % note1)
         if note2 < 2 or note2 > 28:

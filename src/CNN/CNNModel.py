@@ -1,7 +1,7 @@
 from torch import nn
 import torch
 
-class CNNMelodyModel(nn.Module):
+class CNNModel(nn.Module):
     def __init__(self):
         super().__init__()
         self.channels = [16, 64]

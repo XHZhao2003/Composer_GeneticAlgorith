@@ -4,25 +4,42 @@
 
 from src.Melody import Melody
 from src.Converter import Converter
+from sys import argv
 
-datapath = 'data/song.txt'
+sourcepath = 'data/song.txt'
+destpath = ''
+sourceFile = 0
+destFile = 0
+
+argc = len(argv)
+if argc > 1:
+    assert argc == 3        # python Checkdata.py   source.txt  dest.txt
+    sourcepath = argv[1]
+    destpath = argv[2]
+    destFile = open(destpath, 'w')
+sourceFile = open(sourceFile, 'r')
+
 index = 0
 converter = Converter()
 
-with open(datapath, 'r') as f:
-    while True:
-        notes = f.readline()
-        if not notes:
-            break
-        notes = notes.split()
-        notes = [int(note_) for note_ in notes]
-        if len(notes) != 32:
-            raise ValueError("Unexpected length of this piece, with length %d" % len(notes))
-        melody = Melody(notes, len(notes))
-        converter.PrintNotes(melody)
-        outputPath = 'data/midi/' + str(index) + '.mid'
-        converter.ToMidi(melody, outputPath)
-        index += 1
-        
-print("Already Get %d pieces" % index)
-        
+while True:
+    notes = sourceFile.readline()
+    if not notes:
+        break
+    
+    notes = notes.split()
+    if argc == 3:
+        notes = [converter.note2index[note] for note in notes]
+    else:
+        notes = [int(note) for note in notes]
+    if len(notes) != 32:
+        raise ValueError("Unexpected length of this piece, with length %d" % len(notes))
+    melody = Melody(notes, len(notes))
+    converter.PrintNotes(melody)
+    outputPath = 'data/midi/' + str(index) + '.mid'
+    converter.ToMidi(melody, outputPath)
+    index += 1 
+print("Already Get %d pieces" % index)  
+sourceFile.close()
+if destFile != 0:
+    destFile.close()
