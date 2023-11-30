@@ -17,7 +17,7 @@ if argc > 1:
     sourcepath = argv[1]
     destpath = argv[2]
     destFile = open(destpath, 'w')
-sourceFile = open(sourceFile, 'r')
+sourceFile = open(sourcepath, 'r')
 
 index = 0
 converter = Converter()

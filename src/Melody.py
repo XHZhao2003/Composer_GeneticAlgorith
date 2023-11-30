@@ -76,8 +76,8 @@ class Melody:
         
         elif mutationType == 1:         # 八度变异
             upOrDown = random.randint(0, 1)
-            upperBound = min(27, mutation.notes[target] + 12)
-            lowerBound = max(1, mutation.notes[target] - 12)
+            upperBound = min(28, mutation.notes[target] + 12)
+            lowerBound = max(2, mutation.notes[target] - 12)
             if upOrDown == 0:
                 mutation.notes[target] = upperBound
             else:
