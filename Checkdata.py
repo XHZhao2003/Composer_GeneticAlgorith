@@ -30,6 +30,8 @@ while True:
     notes = notes.split()
     if argc == 3:
         notes = [converter.note2index[note] for note in notes]
+        noteOutput = ' '.join([str(note) for note in notes]) + '\n'
+        destFile.write(noteOutput)
     else:
         notes = [int(note) for note in notes]
     if len(notes) != 32:
