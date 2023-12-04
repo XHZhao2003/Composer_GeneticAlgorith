@@ -10,7 +10,7 @@ class GeneticModel:
         self.scoreFunction = func 
         self.maxPopulation = maxPopulation
         self.maxIter = iter
-        self.prob = [0.95, 0.01, 0.03, 0.01]    # 无变异，八度变异，音符变异，交换变异
+        self.prob = [0.9958, 0.001, 0.001, 0.001, 0.001, 0.0001, 0.0001]    # 无变异，移调，倒影，八度，音符，延长，休止
         
     def forward(self):
         for indiv in self.population:
@@ -18,7 +18,6 @@ class GeneticModel:
             
         population = self.population
         for iter in range(self.maxIter):
-            mutation_cnt = [0, 0, 0, 0]
             # 参考文献中阐述了若干不使用crossover的理由，子代完全基于父代变异
             newPopulation = []
             
@@ -36,9 +35,8 @@ class GeneticModel:
                 # 这一个体产生各种变异的数量
                 mutationNumbers = multinomial(randomSelection[index], self.prob)
                 for mutationType, mutationNumber in enumerate(mutationNumbers):
-                    mutation_cnt[mutationType] += mutationNumber
                     for _ in range(mutationNumber):        # 每种变异产生mutationNumber个
-                        mutation = indiv.GetMutation(mutationType)
+                        mutation = indiv.Mutation(mutationType)
                         newPopulation.append(mutation)
             
             # newPopulation = list(newPopulation)
@@ -47,8 +45,7 @@ class GeneticModel:
             newPopulation.sort()
             population = newPopulation     
             
-            print("第%d代遗传: 最小适应度 %f, 产生变异%d, %d, %d, %d次" % 
-                  (iter + 1, population[0].score, mutation_cnt[0], mutation_cnt[1], mutation_cnt[2], mutation_cnt[3]))
+            print("第%d代遗传: 最小适应度 %f" % (iter + 1, population[0].score))
         population = list(set(population))
         population.sort()
         self.population = population
