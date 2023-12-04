@@ -1,6 +1,6 @@
 from functools import total_ordering
 from .Interval import Interval
-from torch import Tensor
+from torch import Tensor, nn
 from .CNN.CNNModel import CNNModel
 import random
 from copy import deepcopy
@@ -13,18 +13,19 @@ class Melody:
         self.score = 0     # 适应度
         assert self.len == len(self.notes)
         
-    def GetScore(self, function='basic', model=None): 
-        if function == 'basic':
-            lambda1 = 0.5
-            lambda2 = 1.0
-            score1 = self.GetIntervalScore()    
-            score2 = self.GetScaleScore()    
-            self.score = lambda1 * score1 + lambda2 * score2 
-        elif function == 'CNN':
-            assert model != None
-            notes = Tensor([self.notes])
-            pred = model(notes)[0]
-            self.score = pred[1]      # 模型预测为负样本的概率
+    def GetScore(self): 
+        lambda1 = 0.5
+        lambda2 = 1.0
+        score1 = self.GetIntervalScore()    
+        score2 = self.GetScaleScore()    
+        self.score = lambda1 * score1 + lambda2 * score2 
+        # elif function == 'model':
+        #     assert model != None
+        #     notes = Tensor([[self.notes]])
+        #     pred = model(notes)
+        #     softmax = nn.Softmax(dim=1)
+        #     pred = softmax(pred)[0]
+        #     self.score = pred[1].item()      # 模型预测为负样本的概率
 
     def GetIntervalScore(self):
         # 对所有相邻音程评分，取平均

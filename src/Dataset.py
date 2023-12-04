@@ -5,7 +5,7 @@ import torch
 from .Melody import Melody
 
 class MelodyDataset(Dataset):
-    def __init__(self, datapath='data/') -> None:
+    def __init__(self, datapath='data/train/') -> None:
         super().__init__()
         self.datapath = datapath
         self.max_length = 32
@@ -17,8 +17,8 @@ class MelodyDataset(Dataset):
         self.ReadRawData()
         
     def ReadRawData(self):
-        positiveDataPath = self.datapath + 'song.txt'
-        negativeDataPath = self.datapath + 'random.txt'
+        positiveDataPath = self.datapath + 'positive.txt'
+        negativeDataPath = self.datapath + 'negative.txt'
         with open(positiveDataPath, 'r') as f:
             while True:
                 line = f.readline()

@@ -8,13 +8,11 @@ class CNNModel(nn.Module):
         self.kernelSize = [3, 3]
         self.linearDim = [256, 2]
         self.conv1 = nn.Sequential(
-            nn.Conv1d(1, self.channels[0], self.kernelSize[0], padding=1, bias=True),
-            nn.BatchNorm1d(self.channels[0]),
+            nn.Conv1d(1, self.channels[0], kernel_size=self.kernelSize[0], padding=1, bias=True),
             nn.ReLU(True)            
         )
         self.conv2 = nn.Sequential(
-            nn.Conv1d(self.channels[0], self.channels[1], self.kernelSize[1], padding=1, bias=True),
-            nn.BatchNorm1d(self.channels[1]),
+            nn.Conv1d(self.channels[0], self.channels[1], kernel_size=self.kernelSize[1], padding=1, bias=True),
             nn.ReLU(True)            
         )
         self.pooling = nn.AvgPool1d(32, 32)
@@ -22,7 +20,6 @@ class CNNModel(nn.Module):
             nn.Linear(self.channels[-1], self.linearDim[0]),
             nn.ReLU(True),
             nn.Linear(self.linearDim[0], self.linearDim[1]),
-            nn.Softmax(dim=1)
         )
         
     def forward(self, x):
