@@ -1,0 +1,20 @@
+D4 - A4 - G4 - C5 - A4 - G4 E4 D4 - D4 0 D4 - E4 F4 E4 - F4 G4 A4 - - - - - A4 A3
+D4 - A4 - G4 - C5 - A4 - G4 E4 D4 - D4 0 D4 - E4 F4 G4 C5 E4 E4 D4 - - - - - D4 C4
+D4 F4 G4 - G4 A4 G4 F4 D4 C4 A3 - - - 0 0 D4 F4 G4 - G4 A4 G4 F4 G4 A4 A4 - - - A3 C4
+D4 F4 G4 - G4 A4 G4 F4 D4 C4 A3 - - - 0 0 D4 F4 G4 A4 G4 - 0 0 D4 F4 G4 A4 E4 - A3 C4
+D4 F4 G4 - G4 A4 G4 F4 D4 C4 A3 - - - 0 0 D4 F4 G4 - G4 A4 G4 F4 G4 C5 A4 - A4 0 G5 C4
+D4 F4 G4 - G4 A4 G4 F4 D4 C4 A3 - - - 0 0 D4 F4 G4 A4 G4 - 0 0 D4 F4 G4 A4 E4 - A3 C4
+D4 F4 G4 - G4 A4 G4 F4 D4 C4 A3 - - - 0 0 D4 F4 G4 - G4 A4 G4 F4 G4 C5 A4 - A4 0 A3 C4
+D4 F4 G4 - G4 A4 G4 F4 D4 C4 A3 - - - D4 F4 G4 A4 E4  - E4 C4 B4 - - - - - A3 C4 D4 F4
+G4 A4 C5 - G4 C4 - - C4 - A3 D4 - A3 - - - - 0 0 0 A3 D4 - A4 - G4 - C5 - A4 -
+G4 F4 D4 - D4 0 D4 - E4 F4 G4 C5 - - - - E4 - - - D4 - - - D4 - - - - - - - D4 - 0 0 0 0 0 0 
+D4 - A4 - G4 - C5 - A4 - G4 E4 D4 - D4 0 D4 - E4 F4 E4 - F4 G4 A4 - - - - - A4 A3
+D4 - A4 - G4 - C5 - A4 - G4 E4 D4 - D4 0 D4 - E4 F4 G4 C5 E4 E4 D4 - - - - - D4 C4
+D4 F4 G4 - G4 A4 G4 F4 D4 C4 A3 - - - 0 0 D4 F4 G4 - G4 A4 G4 F4 G4 A4 A4 - - - A3 C4
+D4 F4 G4 - G4 A4 G4 F4 D4 C4 A3 - - - 0 0 D4 F4 G4 A4 G4 - 0 0 D4 F4 G4 A4 E4 - A3 C4
+D4 F4 G4 - G4 A4 G4 F4 D4 C4 A3 - - - 0 0 D4 F4 G4 - G4 A4 G4 F4 G4 C5 A4 - A4 0 G5 C4
+D4 F4 G4 - G4 A4 G4 F4 D4 C4 A3 - - - 0 0 D4 F4 G4 A4 G4 - 0 0 D4 F4 G4 A4 E4 - A3 C4
+D4 F4 G4 - G4 A4 G4 F4 D4 C4 A3 - - - 0 0 D4 F4 G4 - G4 A4 G4 F4 G4 C5 A4 - A4 0 A3 C4
+D4 F4 G4 - G4 A4 G4 F4 D4 C4 A3 - - - D4 F4 G4 A4 E4  - E4 C4 B4 - - - - - A3 C4 D4 F4
+G4 A4 C5 - G4 C4 - - C4 - A3 D4 - A3 - - - - 0 0 0 A3 D4 - A4 - G4 - C5 - A4 -
+G4 F4 D4 - D4 0 D4 - E4 F4 G4 C5 - - - - E4 - - - D4 - - - D4 - - - - - - - D4 - 0 0 0 0 0 0 
