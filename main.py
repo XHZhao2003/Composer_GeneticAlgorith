@@ -6,9 +6,9 @@ from src.Converter import Converter
 from src.Interval import Interval
 import numpy as np
 
-
 seed = Seed(len=32, rhythm=None)
-model = GeneticModel(seed, func='model', maxPopulation=10000, iter=200)
+# model = GeneticModel(seed, func='basic', maxPopulation=20000, iter=200)
+model = GeneticModel(seed, func='model', maxPopulation=2000, iter=800)
 model.forward()
     
 # Convert best melodies into output midi

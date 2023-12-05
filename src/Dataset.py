@@ -25,7 +25,7 @@ class MelodyDataset(Dataset):
                 if not line:
                     break
                 notes = line.split()
-                notes = [int(x) for x in notes]
+                notes = [int(x)/28 for x in notes]
                 self.melodies.append(notes)
                 self.labels.append([1, 0])
                 self.positiveLength += 1
@@ -38,7 +38,7 @@ class MelodyDataset(Dataset):
                 if not line:
                     break
                 notes = line.split()
-                notes = [int(x) for x in notes]
+                notes = [int(x)/28 for x in notes]
                 self.melodies.append(notes)
                 self.labels.append([0, 1])
                 self.negativeLength += 1

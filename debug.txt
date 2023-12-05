@@ -1,503 +1,810 @@
-Read 218 positive samples into dataset
-Read 60 negative samples into dataset
-Total number of parameters is 20354
-Loss for epoch 1 is 12.567858457565308
-Loss for epoch 2 is 11.814220368862152
-Loss for epoch 3 is 11.657634854316711
-Loss for epoch 4 is 11.572092652320862
-Loss for epoch 5 is 11.509812146425247
-Loss for epoch 6 is 11.457102119922638
-Loss for epoch 7 is 11.410887837409973
-Loss for epoch 8 is 11.372908234596252
-Loss for epoch 9 is 11.342039912939072
-Loss for epoch 10 is 11.314316779375076
-Loss for epoch 11 is 11.291663378477097
-Loss for epoch 12 is 11.27150958776474
-Loss for epoch 13 is 11.254369646310806
-Loss for epoch 14 is 11.23958671092987
-Loss for epoch 15 is 11.225895881652832
-Loss for epoch 16 is 11.212998151779175
-Loss for epoch 17 is 11.200709819793701
-Loss for epoch 18 is 11.188717067241669
-Loss for epoch 19 is 11.177452385425568
-Loss for epoch 20 is 11.166526108980179
-Loss for epoch 21 is 11.156280398368835
-Loss for epoch 22 is 11.145571172237396
-Loss for epoch 23 is 11.135561794042587
-Loss for epoch 24 is 11.126054137945175
-Loss for epoch 25 is 11.115858256816864
-Loss for epoch 26 is 11.106531500816345
-Loss for epoch 27 is 11.096627801656723
-Loss for epoch 28 is 11.086561411619186
-Loss for epoch 29 is 11.077095240354538
-Loss for epoch 30 is 11.067536264657974
-Loss for epoch 31 is 11.057625621557236
-Loss for epoch 32 is 11.04794117808342
-Loss for epoch 33 is 11.038330882787704
-Loss for epoch 34 is 11.028668820858002
-Loss for epoch 35 is 11.018590837717056
-Loss for epoch 36 is 11.009305983781815
-Loss for epoch 37 is 10.999226242303848
-Loss for epoch 38 is 10.989288210868835
-Loss for epoch 39 is 10.980143904685974
-Loss for epoch 40 is 10.969385951757431
-Loss for epoch 41 is 10.959022790193558
-Loss for epoch 42 is 10.949346005916595
-Loss for epoch 43 is 10.93888944387436
-Loss for epoch 44 is 10.928706496953964
-Loss for epoch 45 is 10.918335139751434
-Loss for epoch 46 is 10.90764930844307
-Loss for epoch 47 is 10.896882057189941
-Loss for epoch 48 is 10.88665622472763
-Loss for epoch 49 is 10.87577137351036
-Loss for epoch 50 is 10.865017741918564
-Loss for epoch 51 is 10.853708118200302
-Loss for epoch 52 is 10.842566788196564
-Loss for epoch 53 is 10.831812411546707
-Loss for epoch 54 is 10.820112317800522
-Loss for epoch 55 is 10.807999908924103
-Loss for epoch 56 is 10.796624183654785
-Loss for epoch 57 is 10.785213887691498
-Loss for epoch 58 is 10.77429512143135
-Loss for epoch 59 is 10.762731969356537
-Loss for epoch 60 is 10.751686215400696
-Loss for epoch 61 is 10.740170300006866
-Loss for epoch 62 is 10.729454457759857
-Loss for epoch 63 is 10.718368083238602
-Loss for epoch 64 is 10.706856071949005
-Loss for epoch 65 is 10.69579702615738
-Loss for epoch 66 is 10.684595346450806
-Loss for epoch 67 is 10.673442989587784
-Loss for epoch 68 is 10.661971479654312
-Loss for epoch 69 is 10.650812655687332
-Loss for epoch 70 is 10.639349520206451
-Loss for epoch 71 is 10.627950102090836
-Loss for epoch 72 is 10.616262793540955
-Loss for epoch 73 is 10.604470491409302
-Loss for epoch 74 is 10.592587411403656
-Loss for epoch 75 is 10.581382274627686
-Loss for epoch 76 is 10.569080799818039
-Loss for epoch 77 is 10.557366907596588
-Loss for epoch 78 is 10.545523315668106
-Loss for epoch 79 is 10.533962428569794
-Loss for epoch 80 is 10.521569311618805
-Loss for epoch 81 is 10.509676665067673
-Loss for epoch 82 is 10.498503357172012
-Loss for epoch 83 is 10.485674649477005
-Loss for epoch 84 is 10.473411232233047
-Loss for epoch 85 is 10.461475312709808
-Loss for epoch 86 is 10.44963726401329
-Loss for epoch 87 is 10.43690875172615
-Loss for epoch 88 is 10.42465490102768
-Loss for epoch 89 is 10.412660628557205
-Loss for epoch 90 is 10.39987850189209
-Loss for epoch 91 is 10.387492060661316
-Loss for epoch 92 is 10.375688016414642
-Loss for epoch 93 is 10.362640678882599
-Loss for epoch 94 is 10.350253224372864
-Loss for epoch 95 is 10.337776601314545
-Loss for epoch 96 is 10.325473040342331
-Loss for epoch 97 is 10.313104182481766
-Loss for epoch 98 is 10.29993486404419
-Loss for epoch 99 is 10.286920547485352
-Loss for epoch 100 is 10.274038076400757
-Loss for epoch 101 is 10.260444343090057
-Loss for epoch 102 is 10.246481895446777
-Loss for epoch 103 is 10.232373416423798
-Loss for epoch 104 is 10.21692407131195
-Loss for epoch 105 is 10.201001048088074
-Loss for epoch 106 is 10.185006260871887
-Loss for epoch 107 is 10.169810980558395
-Loss for epoch 108 is 10.15367305278778
-Loss for epoch 109 is 10.140859514474869
-Loss for epoch 110 is 10.128039687871933
-Loss for epoch 111 is 10.114145427942276
-Loss for epoch 112 is 10.101019322872162
-Loss for epoch 113 is 10.086487621068954
-Loss for epoch 114 is 10.076529324054718
-Loss for epoch 115 is 10.058985710144043
-Loss for epoch 116 is 10.043186396360397
-Loss for epoch 117 is 10.028889775276184
-Loss for epoch 118 is 10.014118790626526
-Loss for epoch 119 is 9.997798383235931
-Loss for epoch 120 is 9.983350723981857
-Loss for epoch 121 is 9.968423575162888
-Loss for epoch 122 is 9.954721629619598
-Loss for epoch 123 is 9.939723670482635
-Loss for epoch 124 is 9.92522594332695
-Loss for epoch 125 is 9.910265982151031
-Loss for epoch 126 is 9.896672546863556
-Loss for epoch 127 is 9.881948590278625
-Loss for epoch 128 is 9.867278039455414
-Loss for epoch 129 is 9.852319091558456
-Loss for epoch 130 is 9.83779302239418
-Loss for epoch 131 is 9.823217332363129
-Loss for epoch 132 is 9.808757305145264
-Loss for epoch 133 is 9.7943255007267
-Loss for epoch 134 is 9.779451578855515
-Loss for epoch 135 is 9.76462510228157
-Loss for epoch 136 is 9.749474048614502
-Loss for epoch 137 is 9.735010266304016
-Loss for epoch 138 is 9.720694333314896
-Loss for epoch 139 is 9.705419480800629
-Loss for epoch 140 is 9.689998418092728
-Loss for epoch 141 is 9.675525456666946
-Loss for epoch 142 is 9.66120582818985
-Loss for epoch 143 is 9.645052820444107
-Loss for epoch 144 is 9.629716783761978
-Loss for epoch 145 is 9.614998549222946
-Loss for epoch 146 is 9.598781198263168
-Loss for epoch 147 is 9.580500394105911
-Loss for epoch 148 is 9.562702655792236
-Loss for epoch 149 is 9.540519416332245
-Loss for epoch 150 is 9.525521218776703
-Loss for epoch 151 is 9.495404303073883
-Loss for epoch 152 is 9.478866517543793
-Loss for epoch 153 is 9.462958186864853
-Loss for epoch 154 is 9.450182139873505
-Loss for epoch 155 is 9.43128451704979
-Loss for epoch 156 is 9.41441199183464
-Loss for epoch 157 is 9.396845936775208
-Loss for epoch 158 is 9.379371762275696
-Loss for epoch 159 is 9.360390067100525
-Loss for epoch 160 is 9.343126863241196
-Loss for epoch 161 is 9.325187683105469
-Loss for epoch 162 is 9.306611120700836
-Loss for epoch 163 is 9.287356555461884
-Loss for epoch 164 is 9.266139924526215
-Loss for epoch 165 is 9.249470442533493
-Loss for epoch 166 is 9.227908343076706
-Loss for epoch 167 is 9.210686057806015
-Loss for epoch 168 is 9.192613065242767
-Loss for epoch 169 is 9.174419790506363
-Loss for epoch 170 is 9.155917018651962
-Loss for epoch 171 is 9.136248677968979
-Loss for epoch 172 is 9.120325893163681
-Loss for epoch 173 is 9.098264515399933
-Loss for epoch 174 is 9.081085443496704
-Loss for epoch 175 is 9.061524033546448
-Loss for epoch 176 is 9.0402792096138
-Loss for epoch 177 is 9.019261956214905
-Loss for epoch 178 is 8.997751593589783
-Loss for epoch 179 is 8.97474330663681
-Loss for epoch 180 is 8.952424228191376
-Loss for epoch 181 is 8.929132223129272
-Loss for epoch 182 is 8.904320061206818
-Loss for epoch 183 is 8.880582064390182
-Loss for epoch 184 is 8.85517406463623
-Loss for epoch 185 is 8.831088900566101
-Loss for epoch 186 is 8.807902306318283
-Loss for epoch 187 is 8.780345529317856
-Loss for epoch 188 is 8.75539043545723
-Loss for epoch 189 is 8.73257291316986
-Loss for epoch 190 is 8.70571580529213
-Loss for epoch 191 is 8.682763516902924
-Loss for epoch 192 is 8.657835304737091
-Loss for epoch 193 is 8.634605377912521
-Loss for epoch 194 is 8.610309451818466
-Loss for epoch 195 is 8.587140262126923
-Loss for epoch 196 is 8.561403751373291
-Loss for epoch 197 is 8.539348155260086
-Loss for epoch 198 is 8.518378585577011
-Loss for epoch 199 is 8.492197751998901
-Loss for epoch 200 is 8.460311859846115
-Loss for epoch 201 is 8.437069863080978
-Loss for epoch 202 is 8.41364511847496
-Loss for epoch 203 is 8.392189890146255
-Loss for epoch 204 is 8.366941094398499
-Loss for epoch 205 is 8.346529215574265
-Loss for epoch 206 is 8.324288129806519
-Loss for epoch 207 is 8.304733961820602
-Loss for epoch 208 is 8.278391510248184
-Loss for epoch 209 is 8.259559333324432
-Loss for epoch 210 is 8.236555993556976
-Loss for epoch 211 is 8.21552637219429
-Loss for epoch 212 is 8.19343677163124
-Loss for epoch 213 is 8.170981138944626
-Loss for epoch 214 is 8.148290157318115
-Loss for epoch 215 is 8.128193974494934
-Loss for epoch 216 is 8.107852339744568
-Loss for epoch 217 is 8.084907174110413
-Loss for epoch 218 is 8.064994245767593
-Loss for epoch 219 is 8.044125393033028
-Loss for epoch 220 is 8.023192331194878
-Loss for epoch 221 is 8.00085997581482
-Loss for epoch 222 is 7.980691969394684
-Loss for epoch 223 is 7.957307785749435
-Loss for epoch 224 is 7.937534749507904
-Loss for epoch 225 is 7.916378140449524
-Loss for epoch 226 is 7.894258588552475
-Loss for epoch 227 is 7.872715622186661
-Loss for epoch 228 is 7.8518205136060715
-Loss for epoch 229 is 7.830011993646622
-Loss for epoch 230 is 7.80931630730629
-Loss for epoch 231 is 7.786686152219772
-Loss for epoch 232 is 7.765916362404823
-Loss for epoch 233 is 7.743162542581558
-Loss for epoch 234 is 7.723651096224785
-Loss for epoch 235 is 7.699550062417984
-Loss for epoch 236 is 7.680232852697372
-Loss for epoch 237 is 7.658168613910675
-Loss for epoch 238 is 7.637124001979828
-Loss for epoch 239 is 7.6144521832466125
-Loss for epoch 240 is 7.593839913606644
-Loss for epoch 241 is 7.571750432252884
-Loss for epoch 242 is 7.550781473517418
-Loss for epoch 243 is 7.528852224349976
-Loss for epoch 244 is 7.5079653561115265
-Loss for epoch 245 is 7.48501318693161
-Loss for epoch 246 is 7.46404792368412
-Loss for epoch 247 is 7.44443853199482
-Loss for epoch 248 is 7.419619247317314
-Loss for epoch 249 is 7.399445056915283
-Loss for epoch 250 is 7.378489136695862
-Loss for epoch 251 is 7.3557610511779785
-Loss for epoch 252 is 7.3330980241298676
-Loss for epoch 253 is 7.313979908823967
-Loss for epoch 254 is 7.289728373289108
-Loss for epoch 255 is 7.269629895687103
-Loss for epoch 256 is 7.24556577205658
-Loss for epoch 257 is 7.224548563361168
-Loss for epoch 258 is 7.2015774846076965
-Loss for epoch 259 is 7.181890442967415
-Loss for epoch 260 is 7.158221080899239
-Loss for epoch 261 is 7.134779006242752
-Loss for epoch 262 is 7.116626933217049
-Loss for epoch 263 is 7.0906049609184265
-Loss for epoch 264 is 7.068707227706909
-Loss for epoch 265 is 7.047798842191696
-Loss for epoch 266 is 7.02520877122879
-Loss for epoch 267 is 7.001382574439049
-Loss for epoch 268 is 6.980950549244881
-Loss for epoch 269 is 6.957932353019714
-Loss for epoch 270 is 6.935582771897316
-Loss for epoch 271 is 6.914070710539818
-Loss for epoch 272 is 6.889917761087418
-Loss for epoch 273 is 6.868358492851257
-Loss for epoch 274 is 6.845805108547211
-Loss for epoch 275 is 6.82231330871582
-Loss for epoch 276 is 6.799753859639168
-Loss for epoch 277 is 6.776249140501022
-Loss for epoch 278 is 6.7540715634822845
-Loss for epoch 279 is 6.731617420911789
-Loss for epoch 280 is 6.71037270128727
-Loss for epoch 281 is 6.686530485749245
-Loss for epoch 282 is 6.666418105363846
-Loss for epoch 283 is 6.643543362617493
-Loss for epoch 284 is 6.622738316655159
-Loss for epoch 285 is 6.599467322230339
-Loss for epoch 286 is 6.5795430690050125
-Loss for epoch 287 is 6.556210279464722
-Loss for epoch 288 is 6.536112383008003
-Loss for epoch 289 is 6.513929858803749
-Loss for epoch 290 is 6.491351991891861
-Loss for epoch 291 is 6.471201062202454
-Loss for epoch 292 is 6.4475583136081696
-Loss for epoch 293 is 6.4266451597213745
-Loss for epoch 294 is 6.404902517795563
-Loss for epoch 295 is 6.382568001747131
-Loss for epoch 296 is 6.361095756292343
-Loss for epoch 297 is 6.339313447475433
-Loss for epoch 298 is 6.317561984062195
-Loss for epoch 299 is 6.295602336525917
-Loss for epoch 300 is 6.2748177498579025
-Loss for epoch 301 is 6.252093553543091
-Loss for epoch 302 is 6.231379464268684
-Loss for epoch 303 is 6.208927869796753
-Loss for epoch 304 is 6.187057659029961
-Loss for epoch 305 is 6.16490675508976
-Loss for epoch 306 is 6.144071042537689
-Loss for epoch 307 is 6.12267878651619
-Loss for epoch 308 is 6.101020500063896
-Loss for epoch 309 is 6.07759228348732
-Loss for epoch 310 is 6.05818384885788
-Loss for epoch 311 is 6.0369881093502045
-Loss for epoch 312 is 6.013534665107727
-Loss for epoch 313 is 5.992886707186699
-Loss for epoch 314 is 5.972509920597076
-Loss for epoch 315 is 5.950524911284447
-Loss for epoch 316 is 5.929483205080032
-Loss for epoch 317 is 5.908103764057159
-Loss for epoch 318 is 5.885045140981674
-Loss for epoch 319 is 5.865639716386795
-Loss for epoch 320 is 5.8447595089674
-Loss for epoch 321 is 5.824451565742493
-Loss for epoch 322 is 5.8025833517313
-Loss for epoch 323 is 5.783622652292252
-Loss for epoch 324 is 5.761639937758446
-Loss for epoch 325 is 5.7399537563323975
-Loss for epoch 326 is 5.717979356646538
-Loss for epoch 327 is 5.697786942124367
-Loss for epoch 328 is 5.672656863927841
-Loss for epoch 329 is 5.651634693145752
-Loss for epoch 330 is 5.630325824022293
-Loss for epoch 331 is 5.608416676521301
-Loss for epoch 332 is 5.585199251770973
-Loss for epoch 333 is 5.564865469932556
-Loss for epoch 334 is 5.538993939757347
-Loss for epoch 335 is 5.5170420706272125
-Loss for epoch 336 is 5.495555192232132
-Loss for epoch 337 is 5.473013073205948
-Loss for epoch 338 is 5.449406936764717
-Loss for epoch 339 is 5.429907992482185
-Loss for epoch 340 is 5.408541619777679
-Loss for epoch 341 is 5.389377593994141
-Loss for epoch 342 is 5.364169418811798
-Loss for epoch 343 is 5.34316548705101
-Loss for epoch 344 is 5.321473717689514
-Loss for epoch 345 is 5.302280858159065
-Loss for epoch 346 is 5.282544627785683
-Loss for epoch 347 is 5.259899228811264
-Loss for epoch 348 is 5.241615876555443
-Loss for epoch 349 is 5.221506670117378
-Loss for epoch 350 is 5.201946288347244
-Loss for epoch 351 is 5.181038975715637
-Loss for epoch 352 is 5.162383675575256
-Loss for epoch 353 is 5.14441891014576
-Loss for epoch 354 is 5.123863726854324
-Loss for epoch 355 is 5.103974744677544
-Loss for epoch 356 is 5.085253685712814
-Loss for epoch 357 is 5.066387802362442
-Loss for epoch 358 is 5.0470859706401825
-Loss for epoch 359 is 5.028584465384483
-Loss for epoch 360 is 5.0092648565769196
-Loss for epoch 361 is 4.990057736635208
-Loss for epoch 362 is 4.971802368760109
-Loss for epoch 363 is 4.951605916023254
-Loss for epoch 364 is 4.9326435178518295
-Loss for epoch 365 is 4.915088340640068
-Loss for epoch 366 is 4.894193552434444
-Loss for epoch 367 is 4.874493286013603
-Loss for epoch 368 is 4.857852354645729
-Loss for epoch 369 is 4.839255467057228
-Loss for epoch 370 is 4.820927940309048
-Loss for epoch 371 is 4.804547160863876
-Loss for epoch 372 is 4.7859936729073524
-Loss for epoch 373 is 4.7719589322805405
-Loss for epoch 374 is 4.753063410520554
-Loss for epoch 375 is 4.737042844295502
-Loss for epoch 376 is 4.720630303025246
-Loss for epoch 377 is 4.703742705285549
-Loss for epoch 378 is 4.686457641422749
-Loss for epoch 379 is 4.670562155544758
-Loss for epoch 380 is 4.653460830450058
-Loss for epoch 381 is 4.637879952788353
-Loss for epoch 382 is 4.621160574257374
-Loss for epoch 383 is 4.603743635118008
-Loss for epoch 384 is 4.589059688150883
-Loss for epoch 385 is 4.573077701032162
-Loss for epoch 386 is 4.555658847093582
-Loss for epoch 387 is 4.540652111172676
-Loss for epoch 388 is 4.523887023329735
-Loss for epoch 389 is 4.509202651679516
-Loss for epoch 390 is 4.49206418544054
-Loss for epoch 391 is 4.476926602423191
-Loss for epoch 392 is 4.462302327156067
-Loss for epoch 393 is 4.445038266479969
-Loss for epoch 394 is 4.430543817579746
-Loss for epoch 395 is 4.415681339800358
-Loss for epoch 396 is 4.4005100056529045
-Loss for epoch 397 is 4.384399019181728
-Loss for epoch 398 is 4.368362158536911
-Loss for epoch 399 is 4.355256408452988
-Loss for epoch 400 is 4.339379541575909
-Loss for epoch 401 is 4.323898732662201
-Loss for epoch 402 is 4.308861710131168
-Loss for epoch 403 is 4.294088877737522
-Loss for epoch 404 is 4.279969312250614
-Loss for epoch 405 is 4.265164092183113
-Loss for epoch 406 is 4.249481216073036
-Loss for epoch 407 is 4.235336944460869
-Loss for epoch 408 is 4.220988646149635
-Loss for epoch 409 is 4.204446524381638
-Loss for epoch 410 is 4.190568961203098
-Loss for epoch 411 is 4.176697127521038
-Loss for epoch 412 is 4.161713749170303
-Loss for epoch 413 is 4.147544376552105
-Loss for epoch 414 is 4.133615352213383
-Loss for epoch 415 is 4.118721254169941
-Loss for epoch 416 is 4.105279259383678
-Loss for epoch 417 is 4.0915567278862
-Loss for epoch 418 is 4.076276883482933
-Loss for epoch 419 is 4.062599189579487
-Loss for epoch 420 is 4.050072655081749
-Loss for epoch 421 is 4.0350939482450485
-Loss for epoch 422 is 4.021405577659607
-Loss for epoch 423 is 4.007791519165039
-Loss for epoch 424 is 3.9946168288588524
-Loss for epoch 425 is 3.9793654084205627
-Loss for epoch 426 is 3.968768946826458
-Loss for epoch 427 is 3.9535351917147636
-Loss for epoch 428 is 3.9399330094456673
-Loss for epoch 429 is 3.926952503621578
-Loss for epoch 430 is 3.9131414219737053
-Loss for epoch 431 is 3.9005390852689743
-Loss for epoch 432 is 3.888020470738411
-Loss for epoch 433 is 3.8736080899834633
-Loss for epoch 434 is 3.8613171875476837
-Loss for epoch 435 is 3.8485036864876747
-Loss for epoch 436 is 3.8349739760160446
-Loss for epoch 437 is 3.822372980415821
-Loss for epoch 438 is 3.810182936489582
-Loss for epoch 439 is 3.797220394015312
-Loss for epoch 440 is 3.7850189432501793
-Loss for epoch 441 is 3.7712719962000847
-Loss for epoch 442 is 3.7590936347842216
-Loss for epoch 443 is 3.7461130246520042
-Loss for epoch 444 is 3.733380079269409
-Loss for epoch 445 is 3.722787171602249
-Loss for epoch 446 is 3.70856873691082
-Loss for epoch 447 is 3.6973112523555756
-Loss for epoch 448 is 3.68344709277153
-Loss for epoch 449 is 3.672544613480568
-Loss for epoch 450 is 3.6613428741693497
-Loss for epoch 451 is 3.6474803909659386
-Loss for epoch 452 is 3.636292554438114
-Loss for epoch 453 is 3.623270407319069
-Loss for epoch 454 is 3.611370086669922
-Loss for epoch 455 is 3.600992925465107
-Loss for epoch 456 is 3.587643913924694
-Loss for epoch 457 is 3.575581058859825
-Loss for epoch 458 is 3.564216434955597
-Loss for epoch 459 is 3.552408069372177
-Loss for epoch 460 is 3.5405348166823387
-Loss for epoch 461 is 3.5292425602674484
-Loss for epoch 462 is 3.518445461988449
-Loss for epoch 463 is 3.5052314773201942
-Loss for epoch 464 is 3.4940844923257828
-Loss for epoch 465 is 3.4827597960829735
-Loss for epoch 466 is 3.47122560441494
-Loss for epoch 467 is 3.460515148937702
-Loss for epoch 468 is 3.4494122564792633
-Loss for epoch 469 is 3.436111517250538
-Loss for epoch 470 is 3.4269467145204544
-Loss for epoch 471 is 3.4147519916296005
-Loss for epoch 472 is 3.4035536497831345
-Loss for epoch 473 is 3.3935832157731056
-Loss for epoch 474 is 3.3819126710295677
-Loss for epoch 475 is 3.3703524097800255
-Loss for epoch 476 is 3.3597049713134766
-Loss for epoch 477 is 3.348737508058548
-Loss for epoch 478 is 3.3379723355174065
-Loss for epoch 479 is 3.326635841280222
-Loss for epoch 480 is 3.3158657029271126
-Loss for epoch 481 is 3.3048746548593044
-Loss for epoch 482 is 3.2954096980392933
-Loss for epoch 483 is 3.2830797396600246
-Loss for epoch 484 is 3.2727893702685833
-Loss for epoch 485 is 3.2622788175940514
-Loss for epoch 486 is 3.2514840736985207
-Loss for epoch 487 is 3.240841470658779
-Loss for epoch 488 is 3.2317941561341286
-Loss for epoch 489 is 3.219723753631115
-Loss for epoch 490 is 3.20892483741045
-Loss for epoch 491 is 3.1995709240436554
-Loss for epoch 492 is 3.1896279715001583
-Loss for epoch 493 is 3.1785789281129837
-Loss for epoch 494 is 3.1684764996170998
-Loss for epoch 495 is 3.1585423573851585
-Loss for epoch 496 is 3.148933596909046
-Loss for epoch 497 is 3.138091739267111
-Loss for epoch 498 is 3.12854815274477
-Loss for epoch 499 is 3.1190927661955357
-Loss for epoch 500 is 3.109075151383877
+1-th Generation: best score: 2.529885
+2-th Generation: best score: 2.529885
+3-th Generation: best score: 2.560067
+4-th Generation: best score: 2.480769
+5-th Generation: best score: 2.479978
+6-th Generation: best score: 2.568681
+7-th Generation: best score: 2.564368
+8-th Generation: best score: 2.556322
+9-th Generation: best score: 2.521839
+10-th Generation: best score: 2.461538
+11-th Generation: best score: 2.470769
+12-th Generation: best score: 2.504598
+13-th Generation: best score: 2.495402
+14-th Generation: best score: 2.403846
+15-th Generation: best score: 2.403846
+16-th Generation: best score: 2.403846
+17-th Generation: best score: 2.403846
+18-th Generation: best score: 2.443678
+19-th Generation: best score: 2.480769
+20-th Generation: best score: 2.432703
+21-th Generation: best score: 2.432703
+22-th Generation: best score: 2.432703
+23-th Generation: best score: 2.348790
+24-th Generation: best score: 2.348790
+25-th Generation: best score: 2.348790
+26-th Generation: best score: 2.348790
+27-th Generation: best score: 2.348790
+28-th Generation: best score: 2.333669
+29-th Generation: best score: 2.333669
+30-th Generation: best score: 2.333669
+31-th Generation: best score: 2.333669
+32-th Generation: best score: 2.333669
+33-th Generation: best score: 2.333669
+34-th Generation: best score: 2.333669
+35-th Generation: best score: 2.302419
+36-th Generation: best score: 2.290323
+37-th Generation: best score: 2.290323
+38-th Generation: best score: 2.286290
+39-th Generation: best score: 2.270161
+40-th Generation: best score: 2.286290
+41-th Generation: best score: 2.190524
+42-th Generation: best score: 2.190524
+43-th Generation: best score: 2.190524
+44-th Generation: best score: 2.190524
+45-th Generation: best score: 2.266373
+46-th Generation: best score: 2.294048
+47-th Generation: best score: 2.258333
+48-th Generation: best score: 2.258333
+49-th Generation: best score: 2.258333
+50-th Generation: best score: 2.222619
+51-th Generation: best score: 2.222619
+52-th Generation: best score: 2.222619
+53-th Generation: best score: 2.220690
+54-th Generation: best score: 2.186207
+55-th Generation: best score: 2.186207
+56-th Generation: best score: 2.186207
+57-th Generation: best score: 2.186207
+58-th Generation: best score: 2.186207
+59-th Generation: best score: 2.117241
+60-th Generation: best score: 2.117241
+61-th Generation: best score: 2.096774
+62-th Generation: best score: 2.129032
+63-th Generation: best score: 2.148498
+64-th Generation: best score: 2.148498
+65-th Generation: best score: 2.148498
+66-th Generation: best score: 2.151724
+67-th Generation: best score: 2.151724
+68-th Generation: best score: 2.168966
+69-th Generation: best score: 2.168966
+70-th Generation: best score: 2.131257
+71-th Generation: best score: 2.096774
+72-th Generation: best score: 2.096774
+73-th Generation: best score: 2.118391
+74-th Generation: best score: 2.118391
+75-th Generation: best score: 2.096774
+76-th Generation: best score: 2.098999
+77-th Generation: best score: 2.118391
+78-th Generation: best score: 2.118391
+79-th Generation: best score: 2.118391
+80-th Generation: best score: 2.062291
+81-th Generation: best score: 2.062291
+82-th Generation: best score: 2.062291
+83-th Generation: best score: 2.062291
+84-th Generation: best score: 2.062291
+85-th Generation: best score: 2.103448
+86-th Generation: best score: 2.113793
+87-th Generation: best score: 2.113793
+88-th Generation: best score: 2.120690
+89-th Generation: best score: 2.129032
+90-th Generation: best score: 2.129032
+91-th Generation: best score: 2.094549
+92-th Generation: best score: 2.094549
+93-th Generation: best score: 2.135632
+94-th Generation: best score: 2.101149
+95-th Generation: best score: 2.101149
+96-th Generation: best score: 2.146274
+97-th Generation: best score: 2.135632
+98-th Generation: best score: 2.135632
+99-th Generation: best score: 2.146274
+100-th Generation: best score: 2.149425
+101-th Generation: best score: 2.149425
+102-th Generation: best score: 2.151724
+103-th Generation: best score: 2.113793
+104-th Generation: best score: 2.113793
+105-th Generation: best score: 2.113793
+106-th Generation: best score: 2.113793
+107-th Generation: best score: 2.137931
+108-th Generation: best score: 2.134483
+109-th Generation: best score: 2.116092
+110-th Generation: best score: 2.116092
+111-th Generation: best score: 2.116092
+112-th Generation: best score: 2.116092
+113-th Generation: best score: 2.116092
+114-th Generation: best score: 2.116092
+115-th Generation: best score: 2.167816
+116-th Generation: best score: 2.167816
+117-th Generation: best score: 2.165740
+118-th Generation: best score: 2.116240
+119-th Generation: best score: 2.163515
+120-th Generation: best score: 2.146274
+121-th Generation: best score: 2.163515
+122-th Generation: best score: 2.102381
+123-th Generation: best score: 2.102381
+124-th Generation: best score: 2.102381
+125-th Generation: best score: 2.096774
+126-th Generation: best score: 2.096774
+127-th Generation: best score: 2.066667
+128-th Generation: best score: 2.102381
+129-th Generation: best score: 2.102381
+130-th Generation: best score: 2.102381
+131-th Generation: best score: 2.151190
+132-th Generation: best score: 2.151190
+133-th Generation: best score: 2.102381
+134-th Generation: best score: 2.133333
+135-th Generation: best score: 2.129032
+136-th Generation: best score: 2.062291
+137-th Generation: best score: 2.111791
+138-th Generation: best score: 2.111791
+139-th Generation: best score: 2.100000
+140-th Generation: best score: 2.093407
+141-th Generation: best score: 2.045050
+142-th Generation: best score: 2.045050
+143-th Generation: best score: 2.100000
+144-th Generation: best score: 2.114016
+145-th Generation: best score: 2.114016
+146-th Generation: best score: 2.096774
+147-th Generation: best score: 2.096774
+148-th Generation: best score: 2.096774
+149-th Generation: best score: 2.015017
+150-th Generation: best score: 2.096774
+151-th Generation: best score: 2.096774
+152-th Generation: best score: 2.114016
+153-th Generation: best score: 2.114016
+154-th Generation: best score: 2.114016
+155-th Generation: best score: 2.114016
+156-th Generation: best score: 2.109566
+157-th Generation: best score: 2.031034
+158-th Generation: best score: 2.031034
+159-th Generation: best score: 2.031034
+160-th Generation: best score: 2.031034
+161-th Generation: best score: 2.031034
+162-th Generation: best score: 2.017241
+163-th Generation: best score: 2.017241
+164-th Generation: best score: 2.017241
+165-th Generation: best score: 2.017241
+166-th Generation: best score: 2.064516
+167-th Generation: best score: 2.064516
+168-th Generation: best score: 2.064516
+169-th Generation: best score: 2.064516
+170-th Generation: best score: 2.064516
+171-th Generation: best score: 2.064516
+172-th Generation: best score: 2.064516
+173-th Generation: best score: 2.064516
+174-th Generation: best score: 2.064516
+175-th Generation: best score: 2.064516
+176-th Generation: best score: 2.064516
+177-th Generation: best score: 2.064516
+178-th Generation: best score: 2.064516
+179-th Generation: best score: 2.096774
+180-th Generation: best score: 2.096774
+181-th Generation: best score: 2.047275
+182-th Generation: best score: 2.060067
+183-th Generation: best score: 1.995551
+184-th Generation: best score: 1.995551
+185-th Generation: best score: 1.995551
+186-th Generation: best score: 1.995551
+187-th Generation: best score: 1.995551
+188-th Generation: best score: 1.995551
+189-th Generation: best score: 1.995551
+190-th Generation: best score: 1.995551
+191-th Generation: best score: 1.995551
+192-th Generation: best score: 1.995551
+193-th Generation: best score: 1.995551
+194-th Generation: best score: 1.995551
+195-th Generation: best score: 1.995551
+196-th Generation: best score: 1.995551
+197-th Generation: best score: 1.995551
+198-th Generation: best score: 1.995551
+199-th Generation: best score: 2.047275
+200-th Generation: best score: 2.047275
+201-th Generation: best score: 2.047275
+202-th Generation: best score: 2.047275
+203-th Generation: best score: 2.047275
+204-th Generation: best score: 1.997775
+205-th Generation: best score: 2.075083
+206-th Generation: best score: 2.030033
+207-th Generation: best score: 2.030033
+208-th Generation: best score: 2.030033
+209-th Generation: best score: 2.064516
+210-th Generation: best score: 2.077308
+211-th Generation: best score: 2.042825
+212-th Generation: best score: 2.042825
+213-th Generation: best score: 2.042825
+214-th Generation: best score: 2.047275
+215-th Generation: best score: 2.047275
+216-th Generation: best score: 2.047275
+217-th Generation: best score: 2.047275
+218-th Generation: best score: 2.015017
+219-th Generation: best score: 2.015017
+220-th Generation: best score: 2.015017
+221-th Generation: best score: 2.015017
+222-th Generation: best score: 1.976085
+223-th Generation: best score: 1.990476
+224-th Generation: best score: 2.008333
+225-th Generation: best score: 2.008333
+226-th Generation: best score: 2.040601
+227-th Generation: best score: 2.013095
+228-th Generation: best score: 2.013095
+229-th Generation: best score: 2.042825
+230-th Generation: best score: 2.025584
+231-th Generation: best score: 1.961905
+232-th Generation: best score: 2.047275
+233-th Generation: best score: 2.034483
+234-th Generation: best score: 2.028571
+235-th Generation: best score: 2.028571
+236-th Generation: best score: 1.955300
+237-th Generation: best score: 1.926190
+238-th Generation: best score: 1.926190
+239-th Generation: best score: 1.926190
+240-th Generation: best score: 1.926190
+241-th Generation: best score: 1.926190
+242-th Generation: best score: 1.926190
+243-th Generation: best score: 1.926190
+244-th Generation: best score: 1.926190
+245-th Generation: best score: 1.926190
+246-th Generation: best score: 1.926190
+247-th Generation: best score: 1.909483
+248-th Generation: best score: 1.926190
+249-th Generation: best score: 1.886335
+250-th Generation: best score: 1.886335
+251-th Generation: best score: 1.886335
+252-th Generation: best score: 1.886335
+253-th Generation: best score: 1.886335
+254-th Generation: best score: 1.886335
+255-th Generation: best score: 1.886335
+256-th Generation: best score: 1.886335
+257-th Generation: best score: 1.886335
+258-th Generation: best score: 1.886335
+259-th Generation: best score: 1.886335
+260-th Generation: best score: 1.886335
+261-th Generation: best score: 1.886335
+262-th Generation: best score: 1.886335
+263-th Generation: best score: 1.886335
+264-th Generation: best score: 1.918263
+265-th Generation: best score: 1.918263
+266-th Generation: best score: 1.902299
+267-th Generation: best score: 1.908333
+268-th Generation: best score: 1.908333
+269-th Generation: best score: 1.908333
+270-th Generation: best score: 1.908333
+271-th Generation: best score: 1.902299
+272-th Generation: best score: 1.908333
+273-th Generation: best score: 1.899745
+274-th Generation: best score: 1.899745
+275-th Generation: best score: 1.899745
+276-th Generation: best score: 1.918263
+277-th Generation: best score: 1.883780
+278-th Generation: best score: 1.918263
+279-th Generation: best score: 1.920817
+280-th Generation: best score: 1.936782
+281-th Generation: best score: 1.936782
+282-th Generation: best score: 1.918263
+283-th Generation: best score: 1.918263
+284-th Generation: best score: 1.918263
+285-th Generation: best score: 1.902299
+286-th Generation: best score: 1.883780
+287-th Generation: best score: 1.883780
+288-th Generation: best score: 1.883780
+289-th Generation: best score: 1.883780
+290-th Generation: best score: 1.883780
+291-th Generation: best score: 1.828225
+292-th Generation: best score: 1.828225
+293-th Generation: best score: 1.828225
+294-th Generation: best score: 1.828225
+295-th Generation: best score: 1.828225
+296-th Generation: best score: 1.828225
+297-th Generation: best score: 1.828225
+298-th Generation: best score: 1.828225
+299-th Generation: best score: 1.828225
+300-th Generation: best score: 1.828225
+301-th Generation: best score: 1.828225
+302-th Generation: best score: 1.828225
+303-th Generation: best score: 1.828225
+304-th Generation: best score: 1.828225
+305-th Generation: best score: 1.828225
+306-th Generation: best score: 1.828225
+307-th Generation: best score: 1.830779
+308-th Generation: best score: 1.830779
+309-th Generation: best score: 1.812169
+310-th Generation: best score: 1.813492
+311-th Generation: best score: 1.813492
+312-th Generation: best score: 1.813492
+313-th Generation: best score: 1.813492
+314-th Generation: best score: 1.813492
+315-th Generation: best score: 1.813492
+316-th Generation: best score: 1.813492
+317-th Generation: best score: 1.813492
+318-th Generation: best score: 1.813492
+319-th Generation: best score: 1.813492
+320-th Generation: best score: 1.813492
+321-th Generation: best score: 1.813492
+322-th Generation: best score: 1.813492
+323-th Generation: best score: 1.813492
+324-th Generation: best score: 1.787037
+325-th Generation: best score: 1.813492
+326-th Generation: best score: 1.813492
+327-th Generation: best score: 1.794974
+328-th Generation: best score: 1.794974
+329-th Generation: best score: 1.794974
+330-th Generation: best score: 1.794974
+331-th Generation: best score: 1.776455
+332-th Generation: best score: 1.776455
+333-th Generation: best score: 1.757937
+334-th Generation: best score: 1.757937
+335-th Generation: best score: 1.794974
+336-th Generation: best score: 1.776455
+337-th Generation: best score: 1.776455
+338-th Generation: best score: 1.793742
+339-th Generation: best score: 1.775223
+340-th Generation: best score: 1.775223
+341-th Generation: best score: 1.775223
+342-th Generation: best score: 1.794974
+343-th Generation: best score: 1.794974
+344-th Generation: best score: 1.794974
+345-th Generation: best score: 1.794974
+346-th Generation: best score: 1.776455
+347-th Generation: best score: 1.776455
+348-th Generation: best score: 1.776455
+349-th Generation: best score: 1.776455
+350-th Generation: best score: 1.776455
+351-th Generation: best score: 1.776455
+352-th Generation: best score: 1.776455
+353-th Generation: best score: 1.757937
+354-th Generation: best score: 1.794974
+355-th Generation: best score: 1.794974
+356-th Generation: best score: 1.794974
+357-th Generation: best score: 1.813492
+358-th Generation: best score: 1.813492
+359-th Generation: best score: 1.813492
+360-th Generation: best score: 1.793742
+361-th Generation: best score: 1.793742
+362-th Generation: best score: 1.813492
+363-th Generation: best score: 1.813492
+364-th Generation: best score: 1.813492
+365-th Generation: best score: 1.813492
+366-th Generation: best score: 1.828225
+367-th Generation: best score: 1.832011
+368-th Generation: best score: 1.832011
+369-th Generation: best score: 1.832011
+370-th Generation: best score: 1.832011
+371-th Generation: best score: 1.846743
+372-th Generation: best score: 1.828225
+373-th Generation: best score: 1.739418
+374-th Generation: best score: 1.793651
+375-th Generation: best score: 1.793651
+376-th Generation: best score: 1.793651
+377-th Generation: best score: 1.793651
+378-th Generation: best score: 1.793651
+379-th Generation: best score: 1.793651
+380-th Generation: best score: 1.793651
+381-th Generation: best score: 1.793651
+382-th Generation: best score: 1.791188
+383-th Generation: best score: 1.809706
+384-th Generation: best score: 1.809706
+385-th Generation: best score: 1.809706
+386-th Generation: best score: 1.809706
+387-th Generation: best score: 1.809706
+388-th Generation: best score: 1.809706
+389-th Generation: best score: 1.809706
+390-th Generation: best score: 1.809706
+391-th Generation: best score: 1.809706
+392-th Generation: best score: 1.809706
+393-th Generation: best score: 1.809706
+394-th Generation: best score: 1.809706
+395-th Generation: best score: 1.791188
+396-th Generation: best score: 1.791188
+397-th Generation: best score: 1.793651
+398-th Generation: best score: 1.809706
+399-th Generation: best score: 1.809706
+400-th Generation: best score: 1.828225
+401-th Generation: best score: 1.846743
+402-th Generation: best score: 1.846743
+403-th Generation: best score: 1.846743
+404-th Generation: best score: 1.849206
+405-th Generation: best score: 1.846743
+406-th Generation: best score: 1.849206
+407-th Generation: best score: 1.844189
+408-th Generation: best score: 1.844189
+409-th Generation: best score: 1.830779
+410-th Generation: best score: 1.830779
+411-th Generation: best score: 1.830779
+412-th Generation: best score: 1.830779
+413-th Generation: best score: 1.849206
+414-th Generation: best score: 1.794974
+415-th Generation: best score: 1.794974
+416-th Generation: best score: 1.794974
+417-th Generation: best score: 1.794974
+418-th Generation: best score: 1.794974
+419-th Generation: best score: 1.794974
+420-th Generation: best score: 1.830688
+421-th Generation: best score: 1.830688
+422-th Generation: best score: 1.793651
+423-th Generation: best score: 1.793651
+424-th Generation: best score: 1.793651
+425-th Generation: best score: 1.793651
+426-th Generation: best score: 1.830688
+427-th Generation: best score: 1.813492
+428-th Generation: best score: 1.830688
+429-th Generation: best score: 1.830688
+430-th Generation: best score: 1.830688
+431-th Generation: best score: 1.830688
+432-th Generation: best score: 1.794974
+433-th Generation: best score: 1.830688
+434-th Generation: best score: 1.830688
+435-th Generation: best score: 1.830688
+436-th Generation: best score: 1.830688
+437-th Generation: best score: 1.830688
+438-th Generation: best score: 1.830688
+439-th Generation: best score: 1.830688
+440-th Generation: best score: 1.830688
+441-th Generation: best score: 1.830688
+442-th Generation: best score: 1.830688
+443-th Generation: best score: 1.830688
+444-th Generation: best score: 1.812169
+445-th Generation: best score: 1.794974
+446-th Generation: best score: 1.794974
+447-th Generation: best score: 1.794974
+448-th Generation: best score: 1.794974
+449-th Generation: best score: 1.794974
+450-th Generation: best score: 1.794974
+451-th Generation: best score: 1.794974
+452-th Generation: best score: 1.794974
+453-th Generation: best score: 1.830688
+454-th Generation: best score: 1.830688
+455-th Generation: best score: 1.830688
+456-th Generation: best score: 1.830688
+457-th Generation: best score: 1.830688
+458-th Generation: best score: 1.830688
+459-th Generation: best score: 1.812169
+460-th Generation: best score: 1.812169
+461-th Generation: best score: 1.812169
+462-th Generation: best score: 1.812169
+463-th Generation: best score: 1.830688
+464-th Generation: best score: 1.830688
+465-th Generation: best score: 1.832011
+466-th Generation: best score: 1.832011
+467-th Generation: best score: 1.832011
+468-th Generation: best score: 1.832011
+469-th Generation: best score: 1.867725
+470-th Generation: best score: 1.867725
+471-th Generation: best score: 1.867725
+472-th Generation: best score: 1.867725
+473-th Generation: best score: 1.867725
+474-th Generation: best score: 1.867725
+475-th Generation: best score: 1.867725
+476-th Generation: best score: 1.867725
+477-th Generation: best score: 1.900997
+478-th Generation: best score: 1.900997
+479-th Generation: best score: 1.881766
+480-th Generation: best score: 1.881766
+481-th Generation: best score: 1.881766
+482-th Generation: best score: 1.881226
+483-th Generation: best score: 1.900997
+484-th Generation: best score: 1.899745
+485-th Generation: best score: 1.899745
+486-th Generation: best score: 1.900997
+487-th Generation: best score: 1.899745
+488-th Generation: best score: 1.899745
+489-th Generation: best score: 1.865262
+490-th Generation: best score: 1.900997
+491-th Generation: best score: 1.900997
+492-th Generation: best score: 1.881766
+493-th Generation: best score: 1.881766
+494-th Generation: best score: 1.881766
+495-th Generation: best score: 1.881766
+496-th Generation: best score: 1.881766
+497-th Generation: best score: 1.881226
+498-th Generation: best score: 1.879121
+499-th Generation: best score: 1.899745
+500-th Generation: best score: 1.900997
+501-th Generation: best score: 1.881766
+502-th Generation: best score: 1.881766
+503-th Generation: best score: 1.881766
+504-th Generation: best score: 1.881766
+505-th Generation: best score: 1.881766
+506-th Generation: best score: 1.881766
+507-th Generation: best score: 1.881766
+508-th Generation: best score: 1.881766
+509-th Generation: best score: 1.881766
+510-th Generation: best score: 1.881766
+511-th Generation: best score: 1.862536
+512-th Generation: best score: 1.862536
+513-th Generation: best score: 1.862536
+514-th Generation: best score: 1.750000
+515-th Generation: best score: 1.750000
+516-th Generation: best score: 1.750000
+517-th Generation: best score: 1.750000
+518-th Generation: best score: 1.750000
+519-th Generation: best score: 1.750000
+520-th Generation: best score: 1.750000
+521-th Generation: best score: 1.750000
+522-th Generation: best score: 1.750000
+523-th Generation: best score: 1.750000
+524-th Generation: best score: 1.767806
+525-th Generation: best score: 1.767806
+526-th Generation: best score: 1.767806
+527-th Generation: best score: 1.767806
+528-th Generation: best score: 1.840659
+529-th Generation: best score: 1.782967
+530-th Generation: best score: 1.782967
+531-th Generation: best score: 1.782967
+532-th Generation: best score: 1.782967
+533-th Generation: best score: 1.782967
+534-th Generation: best score: 1.782967
+535-th Generation: best score: 1.782967
+536-th Generation: best score: 1.782967
+537-th Generation: best score: 1.782967
+538-th Generation: best score: 1.782967
+539-th Generation: best score: 1.782967
+540-th Generation: best score: 1.782967
+541-th Generation: best score: 1.782967
+542-th Generation: best score: 1.799451
+543-th Generation: best score: 1.803333
+544-th Generation: best score: 1.802198
+545-th Generation: best score: 1.840659
+546-th Generation: best score: 1.828225
+547-th Generation: best score: 1.840659
+548-th Generation: best score: 1.802198
+549-th Generation: best score: 1.802198
+550-th Generation: best score: 1.785714
+551-th Generation: best score: 1.785714
+552-th Generation: best score: 1.785714
+553-th Generation: best score: 1.802198
+554-th Generation: best score: 1.802198
+555-th Generation: best score: 1.802198
+556-th Generation: best score: 1.802198
+557-th Generation: best score: 1.802198
+558-th Generation: best score: 1.782967
+559-th Generation: best score: 1.782967
+560-th Generation: best score: 1.782967
+561-th Generation: best score: 1.782967
+562-th Generation: best score: 1.747253
+563-th Generation: best score: 1.747253
+564-th Generation: best score: 1.747253
+565-th Generation: best score: 1.782967
+566-th Generation: best score: 1.747253
+567-th Generation: best score: 1.747253
+568-th Generation: best score: 1.766484
+569-th Generation: best score: 1.747253
+570-th Generation: best score: 1.728022
+571-th Generation: best score: 1.728022
+572-th Generation: best score: 1.728022
+573-th Generation: best score: 1.708791
+574-th Generation: best score: 1.728022
+575-th Generation: best score: 1.708791
+576-th Generation: best score: 1.728022
+577-th Generation: best score: 1.747253
+578-th Generation: best score: 1.763736
+579-th Generation: best score: 1.763736
+580-th Generation: best score: 1.747253
+581-th Generation: best score: 1.728022
+582-th Generation: best score: 1.708791
+583-th Generation: best score: 1.708791
+584-th Generation: best score: 1.747253
+585-th Generation: best score: 1.763736
+586-th Generation: best score: 1.766484
+587-th Generation: best score: 1.728022
+588-th Generation: best score: 1.728022
+589-th Generation: best score: 1.728022
+590-th Generation: best score: 1.728022
+591-th Generation: best score: 1.728022
+592-th Generation: best score: 1.728022
+593-th Generation: best score: 1.728022
+594-th Generation: best score: 1.708791
+595-th Generation: best score: 1.747253
+596-th Generation: best score: 1.747253
+597-th Generation: best score: 1.747253
+598-th Generation: best score: 1.748575
+599-th Generation: best score: 1.748575
+600-th Generation: best score: 1.748575
+601-th Generation: best score: 1.728022
+602-th Generation: best score: 1.748575
+603-th Generation: best score: 1.729345
+604-th Generation: best score: 1.729345
+605-th Generation: best score: 1.729345
+606-th Generation: best score: 1.748575
+607-th Generation: best score: 1.747253
+608-th Generation: best score: 1.748575
+609-th Generation: best score: 1.763736
+610-th Generation: best score: 1.763736
+611-th Generation: best score: 1.728022
+612-th Generation: best score: 1.782967
+613-th Generation: best score: 1.782967
+614-th Generation: best score: 1.747253
+615-th Generation: best score: 1.782967
+616-th Generation: best score: 1.782967
+617-th Generation: best score: 1.782967
+618-th Generation: best score: 1.766484
+619-th Generation: best score: 1.766484
+620-th Generation: best score: 1.766484
+621-th Generation: best score: 1.766484
+622-th Generation: best score: 1.766484
+623-th Generation: best score: 1.763736
+624-th Generation: best score: 1.744505
+625-th Generation: best score: 1.763736
+626-th Generation: best score: 1.747253
+627-th Generation: best score: 1.747253
+628-th Generation: best score: 1.747253
+629-th Generation: best score: 1.747253
+630-th Generation: best score: 1.747253
+631-th Generation: best score: 1.747253
+632-th Generation: best score: 1.756923
+633-th Generation: best score: 1.747253
+634-th Generation: best score: 1.763736
+635-th Generation: best score: 1.747253
+636-th Generation: best score: 1.747253
+637-th Generation: best score: 1.763736
+638-th Generation: best score: 1.763736
+639-th Generation: best score: 1.763736
+640-th Generation: best score: 1.763736
+641-th Generation: best score: 1.763736
+642-th Generation: best score: 1.763736
+643-th Generation: best score: 1.763736
+644-th Generation: best score: 1.763736
+645-th Generation: best score: 1.763736
+646-th Generation: best score: 1.763736
+647-th Generation: best score: 1.763736
+648-th Generation: best score: 1.763736
+649-th Generation: best score: 1.763736
+650-th Generation: best score: 1.763736
+651-th Generation: best score: 1.744505
+652-th Generation: best score: 1.744505
+653-th Generation: best score: 1.744505
+654-th Generation: best score: 1.744505
+655-th Generation: best score: 1.728022
+656-th Generation: best score: 1.728022
+657-th Generation: best score: 1.728022
+658-th Generation: best score: 1.728022
+659-th Generation: best score: 1.708791
+660-th Generation: best score: 1.744505
+661-th Generation: best score: 1.744505
+662-th Generation: best score: 1.744505
+663-th Generation: best score: 1.744505
+664-th Generation: best score: 1.744505
+665-th Generation: best score: 1.744505
+666-th Generation: best score: 1.744505
+667-th Generation: best score: 1.744505
+668-th Generation: best score: 1.729345
+669-th Generation: best score: 1.766484
+670-th Generation: best score: 1.766484
+671-th Generation: best score: 1.782967
+672-th Generation: best score: 1.782967
+673-th Generation: best score: 1.782967
+674-th Generation: best score: 1.782967
+675-th Generation: best score: 1.766484
+676-th Generation: best score: 1.766484
+677-th Generation: best score: 1.767806
+678-th Generation: best score: 1.767806
+679-th Generation: best score: 1.767806
+680-th Generation: best score: 1.748575
+681-th Generation: best score: 1.748575
+682-th Generation: best score: 1.748575
+683-th Generation: best score: 1.748575
+684-th Generation: best score: 1.767806
+685-th Generation: best score: 1.767806
+686-th Generation: best score: 1.767806
+687-th Generation: best score: 1.767806
+688-th Generation: best score: 1.767806
+689-th Generation: best score: 1.767806
+690-th Generation: best score: 1.748575
+691-th Generation: best score: 1.748575
+692-th Generation: best score: 1.748575
+693-th Generation: best score: 1.748575
+694-th Generation: best score: 1.748575
+695-th Generation: best score: 1.748575
+696-th Generation: best score: 1.748575
+697-th Generation: best score: 1.718462
+698-th Generation: best score: 1.718462
+699-th Generation: best score: 1.718462
+700-th Generation: best score: 1.718462
+701-th Generation: best score: 1.698462
+702-th Generation: best score: 1.698462
+703-th Generation: best score: 1.748575
+704-th Generation: best score: 1.729345
+705-th Generation: best score: 1.748575
+706-th Generation: best score: 1.748575
+707-th Generation: best score: 1.748575
+708-th Generation: best score: 1.748575
+709-th Generation: best score: 1.748575
+710-th Generation: best score: 1.729345
+711-th Generation: best score: 1.729345
+712-th Generation: best score: 1.729345
+713-th Generation: best score: 1.729345
+714-th Generation: best score: 1.729345
+715-th Generation: best score: 1.747253
+716-th Generation: best score: 1.747151
+717-th Generation: best score: 1.747253
+718-th Generation: best score: 1.729345
+719-th Generation: best score: 1.730769
+720-th Generation: best score: 1.730769
+721-th Generation: best score: 1.730769
+722-th Generation: best score: 1.769231
+723-th Generation: best score: 1.747253
+724-th Generation: best score: 1.747253
+725-th Generation: best score: 1.747253
+726-th Generation: best score: 1.747253
+727-th Generation: best score: 1.728022
+728-th Generation: best score: 1.747253
+729-th Generation: best score: 1.710114
+730-th Generation: best score: 1.710114
+731-th Generation: best score: 1.728022
+732-th Generation: best score: 1.747253
+733-th Generation: best score: 1.747253
+734-th Generation: best score: 1.747253
+735-th Generation: best score: 1.747253
+736-th Generation: best score: 1.747253
+737-th Generation: best score: 1.747253
+738-th Generation: best score: 1.747253
+739-th Generation: best score: 1.747253
+740-th Generation: best score: 1.728022
+741-th Generation: best score: 1.747253
+742-th Generation: best score: 1.747253
+743-th Generation: best score: 1.747253
+744-th Generation: best score: 1.747253
+745-th Generation: best score: 1.747253
+746-th Generation: best score: 1.747253
+747-th Generation: best score: 1.747253
+748-th Generation: best score: 1.708791
+749-th Generation: best score: 1.708791
+750-th Generation: best score: 1.747151
+751-th Generation: best score: 1.708791
+752-th Generation: best score: 1.708791
+753-th Generation: best score: 1.708791
+754-th Generation: best score: 1.708791
+755-th Generation: best score: 1.747253
+756-th Generation: best score: 1.747253
+757-th Generation: best score: 1.747253
+758-th Generation: best score: 1.747253
+759-th Generation: best score: 1.747253
+760-th Generation: best score: 1.747253
+761-th Generation: best score: 1.728022
+762-th Generation: best score: 1.728022
+763-th Generation: best score: 1.728022
+764-th Generation: best score: 1.728022
+765-th Generation: best score: 1.728022
+766-th Generation: best score: 1.728022
+767-th Generation: best score: 1.728022
+768-th Generation: best score: 1.728022
+769-th Generation: best score: 1.728022
+770-th Generation: best score: 1.728022
+771-th Generation: best score: 1.728022
+772-th Generation: best score: 1.708791
+773-th Generation: best score: 1.708791
+774-th Generation: best score: 1.708791
+775-th Generation: best score: 1.708791
+776-th Generation: best score: 1.708791
+777-th Generation: best score: 1.708791
+778-th Generation: best score: 1.708791
+779-th Generation: best score: 1.708791
+780-th Generation: best score: 1.708791
+781-th Generation: best score: 1.747253
+782-th Generation: best score: 1.747253
+783-th Generation: best score: 1.728022
+784-th Generation: best score: 1.728022
+785-th Generation: best score: 1.728022
+786-th Generation: best score: 1.708791
+787-th Generation: best score: 1.708791
+788-th Generation: best score: 1.708791
+789-th Generation: best score: 1.747253
+790-th Generation: best score: 1.747253
+791-th Generation: best score: 1.747253
+792-th Generation: best score: 1.747253
+793-th Generation: best score: 1.747253
+794-th Generation: best score: 1.747253
+795-th Generation: best score: 1.747253
+796-th Generation: best score: 1.747253
+797-th Generation: best score: 1.747253
+798-th Generation: best score: 1.747253
+799-th Generation: best score: 1.747253
+800-th Generation: best score: 1.747253
+G3 G3 - D4 A3 0 D4 G4 E5 C5 F4 G3 0 D4 G3 B3 D4 A4 D4 A3 D4 A3 D4 0 E4 A3 A3 E4 0 A3 A3 E4
+G3 G3 - D4 A3 0 D4 G4 E5 C5 G4 G3 0 D4 G3 B3 D4 A4 D4 A4 D4 A3 D4 0 E4 A3 A3 E4 0 A3 A3 E4
+G3 G3 - D4 A3 0 D4 G4 E5 C5 F4 G3 0 D4 G3 B3 G3 G3 D4 G3 D4 G4 D4 0 G4 D4 C4 G4 0 C4 C4 G4
+G3 G3 - D4 A3 0 D4 G4 E5 C5 F4 G3 0 D4 G3 B3 D4 A4 D4 A4 D4 A3 D4 0 E4 A3 A3 E4 0 A3 A3 E4
+G3 G3 - D4 A3 0 D4 G4 E5 C5 F4 G3 0 D4 B3 B3 D4 A4 D4 A4 D4 A3 D4 0 E4 A3 A3 E4 0 A3 A3 E4
+G3 G3 - D4 A3 0 D4 G4 E5 C5 F4 G3 0 D4 G3 B3 G4 G3 D4 G3 D4 G4 D4 0 G4 D4 C4 G4 0 C4 C4 G4
+G3 G3 - D4 A3 0 D4 G4 E5 C5 F4 G3 0 D4 G3 B3 G4 G3 D4 G3 D4 G4 D5 0 G4 D4 C4 G4 0 C4 C4 G4
+F3 A3 - E4 B3 0 E4 A4 E4 C5 F5 G4 0 D4 G4 B3 G4 G4 D4 A4 D5 E4 A3 0 E4 B4 B4 E4 0 B4 B4 F#4
+F3 A3 - E4 B3 0 E4 A3 E4 C5 F5 G4 0 D4 G4 B3 G4 G4 D4 A4 D4 E4 A3 0 E4 B4 B4 E4 0 B4 B4 F#4
+F3 A3 - E4 B3 0 E4 A3 E4 C5 F4 G4 0 D4 F#4 B3 G4 G4 D4 A4 D4 E4 A3 0 E4 B4 B4 E4 0 B4 B4 E4

@@ -5,14 +5,16 @@ from torch import Tensor, optim, nn
 import torch
 from tqdm import tqdm
 
-batchsize = 16
+batchsize = 8
 epoch_num = 500
-lrRate = 3e-5
+lrRate = 3e-4
 
 trainDataSet = MelodyDataset()
 trainDataLoader = DataLoader(dataset=trainDataSet,
-                             batch_size=batchsize)
+                             batch_size=batchsize,
+                             shuffle=True)
 model = CNNModel()
+model.train()
 optimizer = optim.Adam(model.parameters(), lr=lrRate)
 lossFn = nn.CrossEntropyLoss()
 

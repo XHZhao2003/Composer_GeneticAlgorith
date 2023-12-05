@@ -15,9 +15,11 @@ class GeneticModel:
         self.maxIter = iter
         self.function = func
         self.model = None
-        if self.function != "basic":
+        self.prob = [0.99, 0.003, 0.003, 0.001, 0.001, 0.001, 0.001]    # 无变异，移调，倒影，八度，音符，延长，休止
+
+        if self.function == "model":
             self.model = torch.load("src/CNN/model.pt")
-        self.prob = [0.9958, 0.001, 0.001, 0.001, 0.001, 0.0001, 0.0001]    # 无变异，移调，倒影，八度，音符，延长，休止
+            self.prob = [0.8, 0.01, 0.01, 0.01, 0.15, 0.01, 0.01]        
         
     def forward(self):
         for indiv in self.population:
@@ -52,12 +54,15 @@ class GeneticModel:
                     indiv.GetScore()
             elif self.function == 'model':
                 # 求所有个体的评分
+                for indiv in newPopulation: 
+                    indiv.GetScore()
+                self.model.TestMode()
                 notesList = Tensor([[indiv.notes] for indiv in newPopulation])
                 logits = self.model(notesList)
                 softmax = nn.Softmax(dim=1)
                 scores = softmax(logits)
                 for index, indiv in enumerate(newPopulation):
-                    indiv.score = scores[index][1].item()
+                    indiv.score += scores[index][1].item()
                 
             newPopulation.sort()
             population = newPopulation     
