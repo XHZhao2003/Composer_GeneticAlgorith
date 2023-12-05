@@ -8,7 +8,7 @@ import numpy as np
 
 seed = Seed(len=32, rhythm=None)
 # model = GeneticModel(seed, func='basic', maxPopulation=20000, iter=200)
-model = GeneticModel(seed, func='model', maxPopulation=2000, iter=800)
+model = GeneticModel(seed, func='model', maxPopulation=20000, iter=1000)
 model.forward()
     
 # Convert best melodies into output midi
