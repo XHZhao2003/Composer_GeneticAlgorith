@@ -1,6 +1,6 @@
 from functools import total_ordering
 from .Interval import Interval
-from torch import Tensor
+from torch import Tensor, nn
 from .CNN.CNNModel import CNNModel
 import random
 from copy import deepcopy
@@ -13,18 +13,12 @@ class Melody:
         self.score = 0     # 适应度
         assert self.len == len(self.notes)
         
-    def GetScore(self, function='basic', model=None): 
-        if function == 'basic':
-            lambda1 = 0.5
-            lambda2 = 1.0
-            score1 = self.GetIntervalScore()    
-            score2 = self.GetScaleScore()    
-            self.score = lambda1 * score1 + lambda2 * score2 
-        elif function == 'CNN':
-            assert model != None
-            notes = Tensor([self.notes])
-            pred = model(notes)[0]
-            self.score = pred[1]      # 模型预测为负样本的概率
+    def GetScore(self): 
+        lambda1 = 0.5
+        lambda2 = 1.0
+        score1 = self.GetIntervalScore()    
+        score2 = self.GetScaleScore()    
+        self.score = lambda1 * score1 + lambda2 * score2 
 
     def GetIntervalScore(self):
         # 对所有相邻音程评分，取平均
@@ -50,16 +44,16 @@ class Melody:
 
     def GetScaleScore(self):
         # 旋律中的调内音越多，适应度越好(越低)
-        # 统计G大调中的调内音 (G, A, B, C, D, E, F#)
+        # 统计C大调中的调内音 (C, D, E, F, G, A, B)
         cnt = 0
         inTonality = 0
-        Gmaj = [4, 6, 8, 9, 11, 1, 3]       # mod 12
+        Cmaj = [9, 11, 1, 2, 4, 6, 8]       # mod 12
         for note in self.notes:
-            if note > 0 and note < 28:
+            if note > 1 and note < 28:
                 cnt += 1
-                if (note % 12) in Gmaj:
+                if (note % 12) in Cmaj:
                     inTonality += 1
-        score2 = 1 - inTonality / cnt
+        score2 = 1 - inTonality / (cnt + 1)
         return score2
 
     
@@ -98,9 +92,9 @@ class Melody:
             if mutation.notes[index] > 1:
                 mutation.notes[index] += deviation
                 if mutation.notes[index] > 28:
-                    mutation.notes[index] = 28
+                    mutation.notes[index] = random.randint(2, 28)
                 elif mutation.notes[index] < 2:
-                    mutation.notes[index] = 2
+                    mutation.notes[index] = random.randint(2, 28)
         return mutation
     
     def MutationInversion(self):
@@ -120,9 +114,9 @@ class Melody:
             deviation = mutation.notes[index] - base
             mutation.notes[index] -= (2 * deviation)
             if mutation.notes[index] < 2:
-                mutation.notes[index] = 2
+                mutation.notes[index] = random.randint(2, 28)
             elif mutation.notes[index] > 28:
-                mutation.notes[index] = 28
+                mutation.notes[index] = random.randint(2, 28)
         return mutation
     
     def MutationOctave(self):
@@ -132,27 +126,27 @@ class Melody:
             target = random.randint(0, self.len - 1)
             
         mutation = deepcopy(self)
-        upOrDown = random.randint(0, 1) * 2 - 1     # 1 or -1
-        mutation.notes[target] += 12 * upOrDown
+        upOrDown = (random.randint(0, 1) * 2) - 1     # 1 or -1
+        mutation.notes[target] += (12 * upOrDown)
         if mutation.notes[target] > 28:
-            mutation.notes[target] = 28
+            mutation.notes[target] = random.randint(2, 28)
         elif mutation.notes[target] < 2:
-            mutation.notes[target] = 2
+            mutation.notes[target] = random.randint(2, 28)
         return mutation
     
     def MutationNote(self):
-        # 随机选取一个音，上下五度内移动
+        # 随机选取一个音，上下四度内移动
         target = random.randint(0, self.len - 1)
         while self.notes[target] < 2:
             target = random.randint(0, self.len - 1)
             
         mutation = deepcopy(self)
-        deviation = random.randint(-7, 7)
+        deviation = random.randint(-5, 5)
         mutation.notes[target] += deviation
         if mutation.notes[target] > 28:
-            mutation.notes[target] = 28
+            mutation.notes[target] = random.randint(2, 28)
         elif mutation.notes[target] < 2:
-            mutation.notes[target] = 2
+            mutation.notes[target] = random.randint(2, 28)
         return mutation
     
     def MutationRest(self):
