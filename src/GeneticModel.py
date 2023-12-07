@@ -8,7 +8,7 @@ from tqdm import tqdm
 
 class GeneticModel:
     # 参数: 初始片段，适应度函数种类，种群最大规模，迭代次数，停止迭代的阈值
-    def __init__(self, seed : Seed, func='basic', maxPopulation=10000, iter=100):
+    def __init__(self, seed : Seed, func='basic1', maxPopulation=10000, iter=100):
         self.population = seed.melodyseed
         self.scoreFunction = func 
         self.maxPopulation = maxPopulation
@@ -49,9 +49,9 @@ class GeneticModel:
                         newPopulation.append(mutation)
             
             # newPopulation = list(newPopulation)
-            if self.function == 'basic':
+            if self.function == 'basic1' or self.function == 'basic2':
                 for indiv in newPopulation: 
-                    indiv.GetScore()
+                    indiv.GetScore(self.function)
             elif self.function == 'model':
                 # 求所有个体的评分
                 for indiv in newPopulation: 
