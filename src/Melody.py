@@ -5,6 +5,7 @@ from .CNN.CNNModel import CNNModel
 import random
 from copy import deepcopy
 import numpy as np
+from scipy.spatial import distance
 
 @total_ordering
 class Melody:
@@ -16,14 +17,23 @@ class Melody:
         
     def GetScore(self, function='basic1'): 
         if function == 'basic1':# 原文献方法
-            alpha = 1.0
-            beta = 0.5
-            gamma = 0.8
+            alpha = 1.5
+            beta = 1.0
+            gamma = 0.5
             f1, f2 = self.GetIntervalScore(zeta=[1.0, 1.0, 1.0, 1.0], eta=[1.0, 1.0, 1.0, 1.0])    
             bl = self.GetBadNote()    
             self.score = alpha * f1 + beta * f2 + gamma * bl
         elif function == 'basic2': # 自制方法
-            self.score = 0.2 * self.FeatureScore(0.5, self.GetSelfSimilarity()) + 0.2 * self.FeatureScore(0.5, self.GetLinearity()) + 0.2 * self.FeatureScore(0.5, self.GetTonality()) + 0.2 * self.FeatureScore(0.5, self.GetPitchDistribution())
+            self.score = 0
+            alpha = [1.0, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5]
+            feature = [self.GetSelfSimilarity(), self.GetLinearity(), self.GetTonality(),self.GetPitchDistribution()]
+            featureScore = [0.05, 0.5, 1.0, 0.9]
+            f1, f2 = self.GetIntervalScore(zeta=[1.0, 1.0, 1.0, 1.0], eta=[1.0, 1.0, 1.0, 1.0])
+            fitness = [f1, f2, self.GetRhythmSimilarity()]
+            for i in range(len(feature)):
+                fitness.append(self.FeatureScore(featureScore[i], feature[i]))
+            for i in range(len(alpha)):
+                self.score += alpha[i] * fitness[i]
 
     def GetIntervalScore(self, zeta=[1.0, 1.0, 1.0, 1.0], eta=[1.0, 1.0, 1.0, 1.0]):
         # 对所有相邻音程评分，按照小节为单位求平均和方差,据此算出适应度函数f1和f2
@@ -113,6 +123,25 @@ class Melody:
             P[note % 12] += 1
         return (self.len - max(P))/11/self.len*12
     
+    def GetRhythmSimilarity(self):
+        # 计算四小节的节奏相似度,越大越不相似————利用Minkowski Distance
+        rhythmSimilarity = 0.0
+        rhythm = []
+        hand = 0
+        for i in range(0, self.len, 8):
+            rhythm.append([])
+            for j in range(i, i+8):
+                if self.notes[j] > 1:
+                    rhythm[hand].append(2)
+                else:
+                    rhythm[hand].append(self.notes[j])
+            hand += 1
+        for i in range(4):
+            for j in range(i+1, 4):
+                rhythmSimilarity += distance.minkowski(rhythm[i], rhythm[j], 2)
+        return rhythmSimilarity
+
+                
     def FeatureScore(self, t, eI):
         # 将特征值转化为得分
         if t < 0.5:
