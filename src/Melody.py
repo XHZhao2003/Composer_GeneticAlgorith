@@ -1,7 +1,5 @@
 from functools import total_ordering
 from .Interval import Interval
-from torch import Tensor
-from .CNN.CNNModel import CNNModel
 import random
 from copy import deepcopy
 import numpy as np
@@ -12,86 +10,80 @@ class Melody:
     def __init__(self, notes: list, length=32):
         self.notes = notes
         self.len = length
-        self.score = 0     # 适应度
+        self.score = 0     
         assert self.len == len(self.notes)
         
-    def GetScore(self, function='basic1'): 
-        if function == 'basic1':# 原文献方法
-            alpha = 1.5
-            beta = 1.0
-            gamma = 0.5
-            f1, f2 = self.GetIntervalScore(zeta=[1.0, 1.0, 1.0, 1.0], eta=[1.0, 1.0, 1.0, 1.0])    
-            bl = self.GetBadNote()    
-            self.score = alpha * f1 + beta * f2 + gamma * bl
-        elif function == 'basic2': # 自制方法
-            self.score = 0
-            alpha = [1.0, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5]
-            feature = [self.GetSelfSimilarity(), self.GetLinearity(), self.GetTonality(),self.GetPitchDistribution()]
-            featureScore = [0.05, 0.5, 1.0, 0.9]
-            f1, f2 = self.GetIntervalScore(zeta=[1.0, 1.0, 1.0, 1.0], eta=[1.0, 1.0, 1.0, 1.0])
-            fitness = [f1, f2, self.GetRhythmSimilarity()]
-            for i in range(len(feature)):
-                fitness.append(self.FeatureScore(featureScore[i], feature[i]))
-            for i in range(len(alpha)):
-                self.score += alpha[i] * fitness[i]
+    def GetScore(self): 
+        self.score = 0
+        # IntervalMean, IntervalVariance, Rhythm, Tonality, SelfSimilarity
+        alpha = [0.5, 0.2, 0.1, 2, 2]
+        fit1, fit2 = self.GetIntervalScore(zeta=[1.0, 1.0, 1.0, 1.0], eta=[1.0, 1.0, 1.0, 1.0])
+        fit3 = self.GetRhythmSimilarity()
+        fit4 = 1 - self.GetTonality()
+        fitness = [fit1, fit2, fit3, fit4]
+
+        # feature = [self.GetSelfSimilarity(), self.GetLinearity(), self.GetTonality(),self.GetPitchDistribution()]
+        # featureScore = [0.05, 0.5, 1.0, 0.9]
+        feature = self.GetSelfSimilarity()
+        featureReference = 2.0
+        fitness.append(self.FeatureScore(featureReference, feature))
+        for i in range(len(alpha)):
+            self.score += alpha[i] * fitness[i]
 
     def GetIntervalScore(self, zeta=[1.0, 1.0, 1.0, 1.0], eta=[1.0, 1.0, 1.0, 1.0]):
         # 对所有相邻音程评分，按照小节为单位求平均和方差,据此算出适应度函数f1和f2
         interval = Interval()
         note1 = 0
         note2 = 0
-        interval_xi, a, b2 = [], [], []
+        interval_xi, mean, variation = [], [], []
 
-        for i in range(0, self.len, 8):
-            for j in range(i, i+7):
-                if (self.notes[j] < 2) or (self.notes[j+1] < 2):
+        for start in range(0, self.len, 8):
+            index1 = start
+            index2 = start + 1
+            interval_xi = []
+            while index1 < start + 8 and index2 < start + 8:
+                if self.notes[index1] < 2:
+                    index1 += 1
+                    index2 += 1
                     continue
-                note1, note2 = self.notes[j], self.notes[j+1]
+                if self.notes[index2] < 2:
+                    index2 += 1
+                    continue
+                note1, note2 = self.notes[index1], self.notes[index2]
                 interval_xi.append(interval.ScoreTwoNote(note1, note2))
-            a.append(np.mean(interval_xi))
-            b2.append(np.var(interval_xi))
-        
-        u = [1.0, 1.0, 1.0, 1.0]
-        sigma2 = [0, 0.2, 0.2, 0]
+                index1 += 1
+                index2 += 1
+            mean.append(np.mean(interval_xi))
+            variation.append(np.var(interval_xi))
+        referenceMean = [1.0, 1.0, 1.0, 1.0]
+        referenceVariation = [0, 0.2, 0.2, 0]
         f1, f2 = 0.0, 0.0
 
-        for i in range(len(a)):
-            f1 += zeta[i] * abs(u[i] - a[i])
-            f2 += eta[i] * abs(sigma2[i] - b2[i])
+        for i in range(4):
+            f1 += zeta[i] * abs(referenceMean[i] - mean[i])
+            f2 += eta[i] * abs(referenceVariation[i] - variation[i])
         return f1, f2
-
-    def GetBadNote(self):
-        # 统计调外音的个数
-        # 统计G大调中的调外音 (G, A, B, C, D, E, F#)
-        outTonality = 0
-        Gmaj = [4, 6, 8, 9, 11, 1, 3]       # mod 12
-        for note in self.notes:
-            if note > 1:
-                if (note % 12) not in Gmaj:
-                    outTonality += 1
-        return outTonality
     
     def GetSelfSimilarity(self):
         # 计算自相似度————相同的音程出现的越频繁，自相似度越高
-        cnt = 0
+        cnt = [0] * 13      # 纯一度-纯八度
         intervalSum = 0
-        for i in range(self.len-1):
-            if self.notes[i] < 2 or self.notes[i+1] < 2:
-                continue
-            cnt += 1
-            intervalSum += abs(self.notes[i+1] - self.notes[i])
-        return max(1, 2*intervalSum/cnt/self.len)
-    
-    def GetLinearity(self):
-        # 计算线性度————线性度越低，音调起伏越大
-        alpha, beta, kappa = 15, -1, 2
-        S = 0.0
-        for i in range(1, self.len-1):
-            if self.notes[i] < 2 or self.notes[i+1] < 2 or self.notes[i-1] < 2:
-                continue
-            S += abs(beta*self.notes[i-1] + kappa*self.notes[i] + beta*self.notes[i+1])
-        return S**2/(S**2+alpha)
-    
+        notes = []
+        for note in self.notes:
+            if note >= 2 and note <= 28:
+                notes.append(note)
+        for i in range(len(notes) -1):
+            intervalSum += 1
+            interval = int(abs(notes[i + 1] - notes[i]))
+            if interval < 12:
+                cnt[interval] += 1
+        score = 0
+        for x in cnt:
+            if x > 0:
+                score += 1
+        score = intervalSum / score
+        return score
+        
     def GetTonality(self):
         # 计算调性一致性————若音符属于一个调性的比例越高，则调性一致性越大。
         keyPrevalence = []
@@ -105,24 +97,15 @@ class Melody:
                 (6 + i) %12,
                 (8 + i) %12
             ]
-            Ki = 0
+            hit = 0
             for note in self.notes:
                 if note < 2:
                     continue
                 if note % 12 in key:
-                    Ki += 1
-            keyPrevalence.append(Ki/self.len)
+                    hit += 1
+            keyPrevalence.append(hit / self.len)
         return max(keyPrevalence) - (1 - max(keyPrevalence))/(self.len-1)
 
-    def GetPitchDistribution(self):
-        # 计算音高分布位置————越高表示音乐整体的音高越高。
-        P = [0]*12
-        for note in self.notes:
-            if note < 2:
-                continue
-            P[note % 12] += 1
-        return (self.len - max(P))/11/self.len*12
-    
     def GetRhythmSimilarity(self):
         # 计算四小节的节奏相似度,越大越不相似————利用Minkowski Distance
         rhythmSimilarity = 0.0
@@ -130,24 +113,20 @@ class Melody:
         hand = 0
         for i in range(0, self.len, 8):
             rhythm.append([])
-            for j in range(i, i+8):
+            for j in range(i, i + 8):
                 if self.notes[j] > 1:
                     rhythm[hand].append(2)
                 else:
                     rhythm[hand].append(self.notes[j])
             hand += 1
         for i in range(4):
-            for j in range(i+1, 4):
+            for j in range(i + 1, 4):
                 rhythmSimilarity += distance.minkowski(rhythm[i], rhythm[j], 2)
         return rhythmSimilarity
-
-                
+       
     def FeatureScore(self, t, eI):
         # 将特征值转化为得分
-        if t < 0.5:
-            return -1/((1 - t)**2)*((eI - t)**2) + 1
-        else:
-            return -1/((0 - t)**2)*((eI - t)**2) + 1
+        return 1 / (1e-3 + (eI - t) ** 2)
 
     def Mutation(self, mutationType:int):
         mutation = 0
