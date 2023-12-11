@@ -4,7 +4,7 @@ from src.Seed import Seed
 seed = Seed()
 negativeDataPath = 'data/random.txt'
 with open(negativeDataPath, 'w') as f:
-    for i in range(2):
+    for i in range(3):
         seed.RandomMelody()
         for j in range(10):
             notes = [str(note) for note in seed.melodyseed[j].notes]

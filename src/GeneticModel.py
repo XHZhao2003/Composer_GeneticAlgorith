@@ -1,30 +1,39 @@
 from .Seed import Seed
 from .Melody import Melody
+import torch
 import numpy as np
 from numpy.random import multinomial
+from torch import Tensor, nn
+from tqdm import tqdm
 
 class GeneticModel:
     # 参数: 初始片段，适应度函数种类，种群最大规模，迭代次数，停止迭代的阈值
-    def __init__(self, seed : Seed, func='basic', maxPopulation=10000, iter=100, threshold=1):
+    def __init__(self, seed : Seed, func='basic1', maxPopulation=10000, iter=100):
         self.population = seed.melodyseed
         self.scoreFunction = func 
         self.maxPopulation = maxPopulation
         self.maxIter = iter
-        self.prob = [0.9958, 0.001, 0.001, 0.001, 0.001, 0.0001, 0.0001]    # 无变异，移调，倒影，八度，音符，延长，休止
+        self.function = func
+        self.model = None
+        self.prob = [0.99, 0.003, 0.003, 0.001, 0.001, 0.001, 0.001]    # 无变异，移调，倒影，八度，音符，延长，休止
+
+        if self.function == "model":
+            self.model = torch.load("src/CNN/model.pt")
+            self.prob = [0.8, 0.001, 0.001, 0.001, 0.195, 0.001, 0.001]        
         
     def forward(self):
         for indiv in self.population:
-            indiv.GetScore()
+            indiv.score = 1
             
         population = self.population
-        for iter in range(self.maxIter):
+        for iter in tqdm(range(self.maxIter), ncols=80, total=self.maxIter):
             # 参考文献中阐述了若干不使用crossover的理由，子代完全基于父代变异
             newPopulation = []
             
             # 多项分布随机出父代个体被选中的次数
             Score = []
             for indiv in population:
-                Score.append(1.0 / indiv.score)
+                Score.append(1.0 / (indiv.score + 1e-3))
             Score = np.array(Score)
             scoreSum = np.sum(Score)
             Score = Score / scoreSum
@@ -40,12 +49,32 @@ class GeneticModel:
                         newPopulation.append(mutation)
             
             # newPopulation = list(newPopulation)
-            for indiv in newPopulation: 
-                indiv.GetScore()
+            if self.function == 'basic1' or self.function == 'basic2':
+                for indiv in newPopulation: 
+                    indiv.GetScore(self.function)
+            elif self.function == 'model':
+                # 求所有个体的评分
+                for indiv in newPopulation: 
+                    indiv.GetScore()
+                self.model.TestMode()
+                notesList = Tensor([[indiv.notes] for indiv in newPopulation])
+                logits = self.model(notesList)
+                for index, indiv in enumerate(newPopulation):
+                    logitNegative = logits[index][1].item()
+                    Bound = 800
+                    score = (logitNegative + Bound) / (2 * Bound)
+                    if score > 1:
+                        score = 1
+                    elif score < 0:
+                        score = 0
+                    if iter == self.maxIter - 1:
+                        print(score, logitNegative)
+                    indiv.score += 5 * score
+                    
             newPopulation.sort()
             population = newPopulation     
             
-            print("第%d代遗传: 最小适应度 %f" % (iter + 1, population[0].score))
+            tqdm.write("%d-th Generation: best score: %f" % (iter + 1, population[0].score))
         population = list(set(population))
         population.sort()
         self.population = population
