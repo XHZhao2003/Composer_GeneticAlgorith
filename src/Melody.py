@@ -73,14 +73,19 @@ class Melody:
     
     def GetSelfSimilarity(self):
         # 计算自相似度————相同的音程出现的越频繁，自相似度越高
-        cnt = 0
-        intervalSum = 0
+        mu = 0
+        S = 0
+        counts = [0]*27
         for i in range(self.len-1):
             if self.notes[i] < 2 or self.notes[i+1] < 2:
                 continue
-            cnt += 1
-            intervalSum += abs(self.notes[i+1] - self.notes[i])
-        return max(1, 2*intervalSum/cnt/self.len)
+            counts[abs(self.notes[i] - self.notes[i+1])] += 1
+        for count in counts:
+            if i >= 1:
+                S += 1
+                mu += count
+        mu /= S
+        return max(1, 2*mu/self.len)
     
     def GetLinearity(self):
         # 计算线性度————线性度越低，音调起伏越大
@@ -124,7 +129,7 @@ class Melody:
         return (self.len - max(P))/11/self.len*12
     
     def GetRhythmSimilarity(self):
-        # 计算四小节的节奏相似度,越大越不相似————利用Minkowski Distance
+        # 计算四小节的节奏相似度,越大越不相似————利用欧氏距离
         rhythmSimilarity = 0.0
         rhythm = []
         hand = 0
@@ -139,7 +144,7 @@ class Melody:
         for i in range(4):
             for j in range(i+1, 4):
                 rhythmSimilarity += distance.minkowski(rhythm[i], rhythm[j], 2)
-        return rhythmSimilarity
+        return rhythmSimilarity/6/8
 
                 
     def FeatureScore(self, t, eI):
