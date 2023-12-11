@@ -8,14 +8,14 @@ from tqdm import tqdm
 
 class GeneticModel:
     # 参数: 初始片段，适应度函数种类，种群最大规模，迭代次数，停止迭代的阈值
-    def __init__(self, seed : Seed, func='basic1', maxPopulation=10000, iter=100):
+    def __init__(self, seed : Seed, func='basic', maxPopulation=10000, iter=100):
         self.population = seed.melodyseed
         self.scoreFunction = func 
         self.maxPopulation = maxPopulation
         self.maxIter = iter
         self.function = func
         self.model = None
-        self.prob = [0.99, 0.003, 0.003, 0.001, 0.001, 0.001, 0.001]    # 无变异，移调，倒影，八度，音符，延长，休止
+        self.prob = [0.95, 0.015, 0.015, 0.005, 0.005, 0.005, 0.005]    # 无变异，移调，倒影，八度，音符，延长，休止
 
         if self.function == "model":
             self.model = torch.load("src/CNN/model.pt")
@@ -48,10 +48,9 @@ class GeneticModel:
                         mutation = indiv.Mutation(mutationType)
                         newPopulation.append(mutation)
             
-            # newPopulation = list(newPopulation)
-            if self.function == 'basic1' or self.function == 'basic2':
+            if self.function == 'basic':
                 for indiv in newPopulation: 
-                    indiv.GetScore(self.function)
+                    indiv.GetScore()
             elif self.function == 'model':
                 # 求所有个体的评分
                 for indiv in newPopulation: 
