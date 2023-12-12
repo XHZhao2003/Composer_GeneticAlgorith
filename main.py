@@ -5,14 +5,16 @@ from numpy.random import multinomial
 from src.Converter import Converter
 from src.Interval import Interval
 
-seed = Seed(len=32, rhythm=None)
-model = GeneticModel(seed, func='basic', maxPopulation=15000, iter=300)
-# model = GeneticModel(seed, func='model', maxPopulation=20000, iter=1000)
-model.forward()
+for experiment in range(1, 45):
+    print("Experiment %d -----------------------------" % experiment)
+    seed = Seed(len=32, rhythm=None)
+    model = GeneticModel(seed, func='basic', maxPopulation=15000, iter=300)
+    # model = GeneticModel(seed, func='model', maxPopulation=20000, iter=1000)
+    model.forward()
     
-# Convert best melodies into output midi
-converter = Converter()
-for i in range(10):
-    name = './output/' + str(i) + '.mid'
-    converter.PrintNotes(model.population[i])
-    converter.ToMidi(model.population[i], name)
+    # Convert best melodies into output midi
+    converter = Converter()
+    for i in range(10):
+        name = './output/' + str(experiment) + '-' + str(i) + '.mid'
+        converter.PrintNotes(model.population[i])
+        converter.ToMidi(model.population[i], name)
