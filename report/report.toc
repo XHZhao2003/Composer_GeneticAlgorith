@@ -1,0 +1,20 @@
+\contentsline {section}{\numberline {1}引言}{1}{}%
+\contentsline {section}{\numberline {2}遗传算法}{2}{}%
+\contentsline {section}{\numberline {3}适应度函数}{3}{}%
+\contentsline {subsection}{\numberline {3.1}基于乐理特征的适应度函数}{3}{}%
+\contentsline {subsubsection}{\numberline {3.1.1}基于音程协和性的适应度函数}{3}{}%
+\contentsline {subsubsection}{\numberline {3.1.2}基于调性一致性的适应度函数}{4}{}%
+\contentsline {subsubsection}{\numberline {3.1.3}基于音程自相似度的适应度函数}{4}{}%
+\contentsline {subsubsection}{\numberline {3.1.4}基于音类分布的适应度函数}{5}{}%
+\contentsline {subsubsection}{\numberline {3.1.5}基于节奏相似度的适应度函数}{5}{}%
+\contentsline {subsection}{\numberline {3.2}基于卷积神经网络的适应度函数}{5}{}%
+\contentsline {section}{\numberline {4}实验}{6}{}%
+\contentsline {subsection}{\numberline {4.1}遗传算法超参数}{6}{}%
+\contentsline {subsection}{\numberline {4.2}模型训练集，测试集}{6}{}%
+\contentsline {section}{\numberline {5}结果分析}{7}{}%
+\contentsline {section}{\numberline {6}小组分工}{8}{}%
+\contentsline {paragraph}{关于适应度函数的文献调研}{8}{}%
+\contentsline {paragraph}{遗传算法，卷积模型实现}{8}{}%
+\contentsline {paragraph}{模型数据集收集}{8}{}%
+\contentsline {paragraph}{实验报告撰写}{8}{}%
+\contentsline {section}{\numberline {7}参考文献}{8}{}%

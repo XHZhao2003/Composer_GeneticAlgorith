@@ -19,7 +19,6 @@ class GeneticModel:
 
         if self.function == "model":
             self.model = torch.load("src/CNN/model.pt")
-            self.prob = [0.8, 0.001, 0.001, 0.001, 0.195, 0.001, 0.001]        
         
     def forward(self):
         for indiv in self.population:
@@ -66,8 +65,6 @@ class GeneticModel:
                         score = 1
                     elif score < 0:
                         score = 0
-                    if iter == self.maxIter - 1:
-                        print(score, logitNegative)
                     indiv.score += 5 * score
                     
             newPopulation.sort()
