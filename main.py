@@ -5,7 +5,7 @@ from numpy.random import multinomial
 from src.Converter import Converter
 from src.Interval import Interval
 
-for experiment in range(30, 51):
+for experiment in range(1, 51):
     print("Experiment %d -----------------------------" % experiment)
     seed = Seed(len=32, rhythm=None)
     #model = GeneticModel(seed, func='basic', maxPopulation=15000, iter=300)
