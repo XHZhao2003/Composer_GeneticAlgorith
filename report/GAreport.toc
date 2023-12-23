@@ -1,0 +1,16 @@
+\contentsline {section}{\numberline {1}引言}{1}{}%
+\contentsline {section}{\numberline {2}遗传算法}{1}{}%
+\contentsline {section}{\numberline {3}适应度函数}{2}{}%
+\contentsline {subsection}{\numberline {3.1}基于乐理特征的适应度函数}{2}{}%
+\contentsline {subsubsection}{\numberline {3.1.1}基于音程协和性的适应度函数}{3}{}%
+\contentsline {subsubsection}{\numberline {3.1.2}基于调性一致性的适应度函数}{3}{}%
+\contentsline {subsubsection}{\numberline {3.1.3}基于音程自相似度的适应度函数}{4}{}%
+\contentsline {subsubsection}{\numberline {3.1.4}基于音类分布的适应度函数}{4}{}%
+\contentsline {subsubsection}{\numberline {3.1.5}基于节奏相似度的适应度函数}{5}{}%
+\contentsline {subsection}{\numberline {3.2}基于卷积神经网络的适应度函数}{5}{}%
+\contentsline {section}{\numberline {4}实验}{6}{}%
+\contentsline {subsection}{\numberline {4.1}变异}{6}{}%
+\contentsline {subsection}{\numberline {4.2}遗传算法超参数}{6}{}%
+\contentsline {subsection}{\numberline {4.3}模型训练集，测试集}{6}{}%
+\contentsline {section}{\numberline {5}结果分析}{7}{}%
+\contentsline {section}{\numberline {6}成员贡献}{8}{}%

@@ -1,10 +1,10 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.11.9)  18 DEC 2023 20:52
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.11.9)  23 DEC 2023 14:10
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**report
-(./report.tex
+**GAreport
+(./GAreport.tex
 LaTeX2e <2022-11-01> patch level 1
 L3 programming layer <2023-02-22> (d:/texlive/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2022/07/02 v1.4n Standard LaTeX document class
@@ -434,8 +434,8 @@ Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
 \@thisruleclass=\count327
 \@lastruleclass=\count328
 \@thisrulewidth=\dimen278
-) (./report.aux)
-\openout1 = `report.aux'.
+) (./GAreport.aux)
+\openout1 = `GAreport.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 36.
 LaTeX Font Info:    ... okay on input line 36.
@@ -470,14 +470,14 @@ Package pdflscape Info: Auto-detected driver: dvipdfm (xetex) on input line 98.
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: 
-* h-part:(L,W,R)=(56.9055pt, 483.69687pt, 56.9055pt)
+* h-part:(L,W,R)=(85.35826pt, 426.79135pt, 85.35826pt)
 * v-part:(T,H,B)=(56.9055pt, 731.23584pt, 56.9055pt)
 * \paperwidth=597.50787pt
 * \paperheight=845.04684pt
-* \textwidth=483.69687pt
+* \textwidth=426.79135pt
 * \textheight=731.23584pt
-* \oddsidemargin=-15.36449pt
-* \evensidemargin=-15.36449pt
+* \oddsidemargin=13.08827pt
+* \evensidemargin=13.08827pt
 * \topmargin=-52.36449pt
 * \headheight=12.0pt
 * \headsep=25.0pt
@@ -555,28 +555,14 @@ LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 \c@lstlisting=\count329
 [1
 
-] (./report.toc
+] [2]
 
 LaTeX Font Warning: Font shape `OMX/cmex/m/n' in size <10.53937> not available
-(Font)              size <10.95> substituted on input line 4.
+(Font)              size <10.95> substituted on input line 131.
 
-)
-\tf@toc=\write3
-\openout3 = `report.toc'.
-
- [2] [1] [2]
-Overfull \hbox (26.66779pt too wide) in paragraph at lines 191--194
-[]\TU/SimSun(0)/m/n/10.53937 式 中，| $\OML/cmm/m/it/10.53937 t$ \TU/SimSun(0)/m/n/10.53937 表 示 参 考 音 乐 的 标 准 值，| $\OML/cmm/m/it/10.53937 e\OT1/cmr/m/n/10.53937 (\OML/cmm/m/it/10.53937 I\OT1/cmr/m/n/10.53937 )$ \TU/SimSun(0)/m/n/10.53937 表 示 遗 传 个 体 在 特 征 $\OML/cmm/m/it/10.53937 e$ \TU/SimSun(0)/m/n/10.53937 上 表 现 的 值，|  这 里 的 $\OML/cmm/m/it/10.53937 e\OT1/cmr/m/n/10.53937 (\OML/cmm/m/it/10.53937 I\OT1/cmr/m/n/10.53937 )$ \TU/SimSun(0)/m/n/10.53937 特 指 $\OML/cmm/m/it/10.53937 SelfSimilarity\OT1/cmr/m/n/10.53937 (\OML/cmm/m/it/10.53937 I\OT1/cmr/m/n/10.53937 )$\TU/SimSun(0)/m/n/10.53937 ，|
- []
-
-[3] [4]
+[3] [4] [5]
 Missing character: There is no ， (U+FF0C) in font [lmroman10-regular]:mapping=tex-text;!
-
-Overfull \hbox (5.45917pt too wide) in paragraph at lines 264--267
-\TU/SimSun(0)/m/n/10.53937 别 对 应 无 变 异 与 六 种 变 异 的 概 率，| $\OML/cmm/m/it/10.53937 M \OT1/cmr/m/n/10.53937 = 15000[]\OML/cmm/m/it/10.53937 N \OT1/cmr/m/n/10.53937 = 300$\TU/SimSun(0)/m/n/10.53937 。|  各 个 适 应 度 函 数 的 权 重 依 次 为 $\OML/cmm/m/it/10.53937 ^^U \OT1/cmr/m/n/10.53937 = [0\OML/cmm/m/it/10.53937 :\OT1/cmr/m/n/10.53937 5\OML/cmm/m/it/10.53937 ; \OT1/cmr/m/n/10.53937 0\OML/cmm/m/it/10.53937 :\OT1/cmr/m/n/10.53937 2\OML/cmm/m/it/10.53937 ; \OT1/cmr/m/n/10.53937 0\OML/cmm/m/it/10.53937 :\OT1/cmr/m/n/10.53937 1\OML/cmm/m/it/10.53937 ; \OT1/cmr/m/n/10.53937 2\OML/cmm/m/it/10.53937 ; \OT1/cmr/m/n/10.53937 2]$\TU/lmr/m/n/10.53937 ,
- []
-
-[5]
+[6]
 
 Package fontspec Info: Could not resolve font "FangSong/BI" (it probably
 (fontspec)             doesn't exist).
@@ -600,19 +586,23 @@ Package fontspec Info: Font family 'FangSong(0)' created for font 'FangSong'
 (fontspec)             <->"FangSong/OT:script=hani;language=dflt;"
 (fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
 
- [6] (./report.aux)
+File: result1.png Graphic file (type bmp)
+<result1.png>
+File: result2.png Graphic file (type bmp)
+<result2.png>
+ [7] [8] (./GAreport.aux)
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.41063pt have occurred.
 
  ) 
 Here is how much of TeX's memory you used:
- 11508 strings out of 476683
- 276862 string characters out of 5809780
+ 11563 strings out of 476683
+ 279704 string characters out of 5809780
  1875012 words of memory out of 5000000
- 31561 multiletter control sequences out of 15000+600000
- 519229 words of font info for 89 fonts, out of 8000000 for 9000
+ 31614 multiletter control sequences out of 15000+600000
+ 519237 words of font info for 90 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 89i,14n,97p,362b,511s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 89i,14n,97p,364b,503s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on report.pdf (8 pages).
+Output written on GAreport.pdf (8 pages).
